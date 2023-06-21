@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .logo {
-    width:200px;
-    height:200px;
+    width:500px;
+    height:500px;
 }
 .header {
     display: flex;
@@ -30,3 +30,7 @@
     margin:40px 200px 50px;
   }
 
+.container {
+  
+  align-items:center;
+}

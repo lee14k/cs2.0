@@ -1,4 +1,3 @@
-// @refresh reload
 import { Suspense, Show, createEffect, createSignal} from "solid-js";
 import {
   useLocation,
@@ -14,6 +13,7 @@ import {
   Title,
 } from "solid-start";
 import "./root.css";
+
 
 export default function Root() {
   const location = useLocation();
