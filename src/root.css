@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+    width:100px;
+    height:100px;
+}
+.header {
+    display: flex;
+    background-image: url('/unbw.jpg'), ;
+    background-size: cover;
+    height: 700px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 1;
+    gap:20px;
+  }
+
+  .headline {
+    z-index:3;
+  }
