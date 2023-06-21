@@ -1,7 +1,9 @@
 import { createSignal } from "solid-js";
 import { useLocation } from "solid-start";
 import { A } from "solid-start";
-
+import Slidebox from "~/components/Slidebox";
+import Footer from "~/components/Footer";
+import Picture from "~/components/Picture";
 const gradientOverlayStyle = `
   position: relative;
   background-image: linear-gradient(
@@ -79,6 +81,11 @@ export default function Home() {
           </A>
         </p>
       </div>
+      <Picture/>
+      <Slidebox  title="Mediation"/>
+      <Slidebox   title="Conflict Resolution"galleryPosition="right"/>
+
+      <Footer/>
     </div>
   );
 }

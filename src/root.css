@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .logo {
-    width:100px;
-    height:100px;
+    width:200px;
+    height:200px;
 }
 .header {
     display: flex;
@@ -21,3 +21,12 @@
   .headline {
     z-index:3;
   }
+
+  .slidebox {
+    padding:50px;
+    background-color: #A9BD68;
+    width:700px;
+    height:400px;
+    margin:40px 200px 50px;
+  }
+
