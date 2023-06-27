@@ -23,7 +23,7 @@ export default function Picture() {
             top: 100;
             left: 0;
             width: 100%;
-            height: 66%;
+            height: 42%;
             background: rgb(90,173,39);
             background: radial-gradient(circle, rgba(90,173,39,1) 5%, rgba(101,164,63,1) 66%, rgba(1,83,60,1) 100%);
             z-index: -1;
@@ -36,8 +36,7 @@ export default function Picture() {
         `}
       </style>
     </div>
-    <h2 class="text-6xl">Working for you</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, dolorum, quam voluptates quibusdam libero excepturi tempore eaque natus vel quod recusandae qui doloremque nam impedit voluptatem enim nesciunt pariatur. Iure.</p>
+    
     </div>
   );
 }

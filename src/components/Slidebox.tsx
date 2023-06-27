@@ -51,20 +51,18 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
 
       <div class="slidebox-with-gallery">
         {galleryOnRight && (
-          <div class="gallerywrap">
-                             <h2 class="sliderighthead">Conflict</h2>
-
-          <div class="gallery">
-              
-<img src="/services.jpeg"/>
-<img src="/gal2.jpeg"/>
-<img src="/gal3.jpeg"/>
-<img src="/gal4.jpeg"/>
-
-</div>
+         <div class="gallerywrap">
+         <div class="frostedglass"><h3 class="calltoaction">Contact us</h3></div>
+             <div class="gallery">
+           
+             <img src="/services.jpeg"/>
+             <img src="/gal2.jpeg"/>
+             <img src="/gal3.jpeg"/>
+             <img src="/gal4.jpeg"/>
+             
+             </div>
+             </div>
   
-  
-            </div>
         )}
 
         <div class={`slidebox ${galleryOnRight ? "order-2" : ""}`}>
@@ -82,7 +80,7 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
 
         {!galleryOnRight && (
           <div class="gallerywrap">
-            <div class="frostedglass"></div>
+            <div class="frostedglass"><h3 class="calltoaction">Contact us</h3></div>
                 <div class="gallery">
               
                 <img src="/services.jpeg"/>

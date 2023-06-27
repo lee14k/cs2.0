@@ -63,8 +63,8 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-          <nav class="bg-emerald-800">
-              <ul class="container flex justify-center items-center p-3 text-gray-200">
+          <nav class="bg-emerald-800 flex">
+              <ul class="container flex justify-center text-2xl text-gray-200">
                 {isMobile() ? (
                   <>
                     <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>

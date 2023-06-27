@@ -17,7 +17,7 @@ const gradientOverlayStyle = `
 
 const overlayBeforeStyle = `
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -28,6 +28,8 @@ const overlayBeforeStyle = `
 const textStyles = `
   position: relative;
   z-index: 2;
+  -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
 `;
 
 const buttonStyles = `
@@ -37,6 +39,7 @@ const buttonStyles = `
   border: solid #99A66D;
   border-radius: 4px;
   cursor: pointer;
+  
 `;
 
 export default function Home() {
@@ -47,8 +50,9 @@ export default function Home() {
 
   const headerClass = `header`;
   const overlayBeforeClass = `overlay-before`;
-  const h1Class = `text-4xl ${textStyles}`;
-  const pClass = active("/contact");
+  const h1Class = `text-6xl font-bold text-white`
+  const h1Special = `text-6xl font-bold text-green`
+  const pClass = `pt-10`;
 
   return (
     <div>
@@ -68,8 +72,8 @@ export default function Home() {
           `}
         </style>
         <div class={overlayBeforeClass}></div>
-        <h1 class={h1Class}>
-          Got a problem? We'll solve it.
+        <div class="frostedglasshead"> <h1 class={h1Class}>
+          Got a </h1> <h1 class={h1Special}>problem?</h1> <h1 class={h1Class}>We'll </h1> <h1 class={h1Special}>solve</h1> <h1 class={h1Class}> it.
         </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nihil
@@ -80,6 +84,7 @@ export default function Home() {
             Contact Us
           </A>
         </p>
+        </div>
       </div>
       <Picture/>
       <Slidebox  title="Mediation"/>
