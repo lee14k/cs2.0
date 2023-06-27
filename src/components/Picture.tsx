@@ -24,7 +24,8 @@ export default function Picture() {
             left: 0;
             width: 100%;
             height: 66%;
-            background-color: green;
+            background: rgb(90,173,39);
+            background: radial-gradient(circle, rgba(90,173,39,1) 5%, rgba(101,164,63,1) 66%, rgba(1,83,60,1) 100%);
             z-index: -1;
           }
 

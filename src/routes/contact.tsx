@@ -1,10 +1,12 @@
 import { A } from "solid-start";
 import Counter from "~/components/Counter";
+import HeaderImage from "~/components/Headerimage";
 
 export default function Contact() {
   return (
    <div>
-    <h1>fuck off</h1>
+      <HeaderImage heading="Contact Us" page="contact" />
+
    </div>
   );
 }

@@ -26,7 +26,7 @@ const galleryStyles = `
   margin-right: 20px;
 `;
 
-export default function Slidebox({ title, galleryPosition = "left" }) {
+export default function Slidebox({ title, galleryPosition = "left" }: {title:string, galleryPosition?:string}) {
   const galleryOnRight = galleryPosition === "right";
 
   return (
@@ -51,8 +51,14 @@ export default function Slidebox({ title, galleryPosition = "left" }) {
       <div class="slidebox-with-gallery">
         {galleryOnRight && (
           <div class="gallery">
-            <h1>hi</h1>
-          </div>
+<img src="/services.jpeg"/>
+<img src="/gal2.jpeg"/>
+<img src="/gal3.jpeg"/>
+<img src="/gal4.jpeg"/>
+
+  
+  
+            </div>
         )}
 
         <div class={`slidebox ${galleryOnRight ? "order-2" : ""}`}>

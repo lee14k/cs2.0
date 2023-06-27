@@ -1,4 +1,4 @@
-import { Suspense, Show, createEffect, createSignal} from "solid-js";
+import { Suspense, Show, createEffect, createSignal, onCleanup} from "solid-js";
 import {
   useLocation,
   A,
@@ -16,6 +16,18 @@ import "./root.css";
 
 
 export default function Root() {
+
+  function applyGlobalFont(fontUrl: string): void {
+    const style = document.createElement('style');
+    style.textContent = `@import url('${fontUrl}'); body { font-family: 'Montserrat', sans-serif; }`;
+    document.head.appendChild(style);
+  
+    // Cleanup function to remove the style element when the component is unmounted
+    onCleanup(() => {
+      document.head.removeChild(style);
+    });
+  }
+  
   const location = useLocation();
   const active = (path: string) => (path === location.pathname ? 'border-sky-600' : 'border-transparent');
 
@@ -38,13 +50,15 @@ export default function Root() {
   const toggleHamburger = () => {
     setShowMobile(!showMobile());
   };
-
+  const fontUrl = 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
+  applyGlobalFont(fontUrl);
   return (
     <Html lang="en">
       <Head>
-        <Title>SolidStart - With TailwindCSS</Title>
+        <Title>Conflict Solutions</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+      
       </Head>
       <Body>
         <Suspense>
@@ -75,8 +89,8 @@ export default function Root() {
                   <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
                     <A href="/about">About</A>
                   </li>
-                  <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
-                    <A href="/about">Services</A>
+                  <li class={`border-b-2 ${active('/services')} mx-1.5 sm:mx-6`}>
+                    <A href="/services">Services</A>
                   </li>
                   <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
                     <A href="/contact">Contact Us</A>

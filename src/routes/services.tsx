@@ -1,7 +1,12 @@
+import HeaderImage from "~/components/Headerimage";
+import Servicesgrid from "~/components/Servicesgrid";
+
+
 export default function Services () {
     return (
         <div>
-            <h1>Services</h1>
+      <HeaderImage heading="Services" page="services" />
+      <Servicesgrid/>
         </div>
     )
 }
