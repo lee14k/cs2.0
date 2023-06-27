@@ -15,6 +15,7 @@ const buttonStyles = `
 const boxStyles = `
   display: flex;
   flex-direction: column;
+  width:100%;
 `;
 
 const boxWrapStyles = `
@@ -50,12 +51,17 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
 
       <div class="slidebox-with-gallery">
         {galleryOnRight && (
+          <div class="gallerywrap">
+                             <h2 class="sliderighthead">Conflict</h2>
+
           <div class="gallery">
+              
 <img src="/services.jpeg"/>
 <img src="/gal2.jpeg"/>
 <img src="/gal3.jpeg"/>
 <img src="/gal4.jpeg"/>
 
+</div>
   
   
             </div>
@@ -75,9 +81,17 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
         </div>
 
         {!galleryOnRight && (
-          <div class="gallery">
-            <h1>hi</h1>
-          </div>
+          <div class="gallerywrap">
+            <div class="frostedglass"></div>
+                <div class="gallery">
+              
+                <img src="/services.jpeg"/>
+                <img src="/gal2.jpeg"/>
+                <img src="/gal3.jpeg"/>
+                <img src="/gal4.jpeg"/>
+                
+                </div>
+                </div>
         )}
       </div>
     </div>
