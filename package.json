@@ -24,7 +24,8 @@
     "solid-js": "^1.7.2",
     "solid-start": "^0.2.26",
     "solid-styled-components": "^0.28.5",
-    "undici": "^5.15.1"
+    "undici": "^5.15.1",
+    "vercel": "^30.2.3"
   },
   "engines": {
     "node": ">=16"

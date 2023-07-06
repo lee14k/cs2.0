@@ -63,39 +63,61 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-            <nav class="bg-emerald-800">
-              <ul class="container flex items-center p-3 text-gray-200">
-                <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
-                  <A href="/">
-                    <img src="/cslogotransparent.png" />
-                  </A>
-                </li>
-                {isMobile() && (
-                  <Show when={showMobile()}>
-                    <li
-                      class={`hamburger-icon ${showMobile() ? 'open' : ''}`}
-                      onClick={toggleHamburger}
-                    >
-                      <div class="line" />
-                      <div class="line" />
-                      <div class="line" />
+          <nav class="bg-emerald-800 flex">
+              <ul class="container flex justify-center text-2xl text-gray-200">
+                {isMobile() ? (
+                  <>
+                    <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
+                      <A href="/">
+                        <img src="/cslogotransparent.png" />
+                      </A>
                     </li>
-                  </Show>
+                    <Show when={showMobile()}>
+                      <li
+                        class={`hamburger-icon ${showMobile() ? 'open' : ''}`}
+                        onClick={toggleHamburger}
+                      >
+                        <div class="line" />
+                        <div class="line" />
+                        <div class="line" />
+                      </li>
+                    </Show>
+                    <Show when={showMobile()}>
+                      <li class={`border-b-2 ${active('/')} mx-1.5 sm:mx-6`}>
+                        <A href="/">Home</A>
+                      </li>
+                      <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
+                        <A href="/about">About</A>
+                      </li>
+                      <li class={`border-b-2 ${active('/services')} mx-1.5 sm:mx-6`}>
+                        <A href="/services">Services</A>
+                      </li>
+                      <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
+                        <A href="/contact">Contact Us</A>
+                      </li>
+                    </Show>
+                  </>
+                ) : (
+                  <>
+                    <li class={`border-b-2 ${active('/')} mx-1.5 sm:mx-6`}>
+                      <A href="/">Home</A>
+                    </li>
+                    <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
+                      <A href="/about">About</A>
+                    </li>
+                    <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
+                      <A href="/">
+                        <img src="/cslogotransparent.png" />
+                      </A>
+                    </li>
+                    <li class={`border-b-2 ${active('/services')} mx-1.5 sm:mx-6`}>
+                      <A href="/services">Services</A>
+                    </li>
+                    <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
+                      <A href="/contact">Contact Us</A>
+                    </li>
+                  </>
                 )}
-                <Show when={showMobile() || !isMobile()}>
-                  <li class={`border-b-2 ${active('/')} mx-1.5 sm:mx-6`}>
-                    <A href="/">Home</A>
-                  </li>
-                  <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
-                    <A href="/about">About</A>
-                  </li>
-                  <li class={`border-b-2 ${active('/services')} mx-1.5 sm:mx-6`}>
-                    <A href="/services">Services</A>
-                  </li>
-                  <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                    <A href="/contact">Contact Us</A>
-                  </li>
-                </Show>
               </ul>
             </nav>
             <Routes>
