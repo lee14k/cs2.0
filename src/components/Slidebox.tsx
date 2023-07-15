@@ -13,18 +13,40 @@ const buttonStyles = `
 `;
 
 const boxStyles = `
-  display: flex;
-  flex-direction: column;
-  width:100%;
+grid-column: 1 / 2;
 `;
 
 const boxWrapStyles = `
-  display: flex;
 `;
 
 const galleryStyles = `
-  flex: 1;
   margin-right: 20px;
+  position: relative;
+  grid-column: 2 / 3;
+`;
+
+const overlayStyles = `
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), white);
+  pointer-events: none;
+`;
+
+const headerStyles = `
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+`;
+
+const galleryWrap = `
+display:flex;
 `;
 
 export default function Slidebox({ title, galleryPosition = "left" }: {title:string, galleryPosition?:string}) {
@@ -42,27 +64,35 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
           }
           .slidebox-with-gallery {
             ${boxWrapStyles}
+            ${galleryWrap}
           }
           .gallery {
             ${galleryStyles}
+          }
+          .gallery-overlay {
+            ${overlayStyles}
+          }
+          .gallery-header {
+            ${headerStyles}
+          }
+          .bodyslide {
+            padding-bottom: 50px;
           }
         `}
       </style>
 
       <div class="slidebox-with-gallery">
         {galleryOnRight && (
-         <div class="gallerywrap">
-         <div class="frostedglass"><h3 class="calltoaction">Contact us</h3></div>
-             <div class="gallery">
-           
-             <img src="/services.jpeg"/>
-             <img src="/gal2.jpeg"/>
-             <img src="/gal3.jpeg"/>
-             <img src="/gal4.jpeg"/>
-             
-             </div>
-             </div>
-  
+          <div class="gallerywrap">
+            <div class="gallery">
+              <div class="gallery-overlay"></div>
+              <h3 class="gallery-header">Contact us</h3>
+              <img src="/services.jpeg"/>
+              <img src="/gal2.jpeg"/>
+              <img src="/gal3.jpeg"/>
+              <img src="/gal4.jpeg"/>
+            </div>
+          </div>
         )}
 
         <div class={`slidebox ${galleryOnRight ? "order-2" : ""}`}>
@@ -79,17 +109,16 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
         </div>
 
         {!galleryOnRight && (
-          <div class="gallerywrap">
-            <div class="frostedglass"><h3 class="calltoaction">Contact us</h3></div>
-                <div class="gallery">
-              
-                <img src="/services.jpeg"/>
-                <img src="/gal2.jpeg"/>
-                <img src="/gal3.jpeg"/>
-                <img src="/gal4.jpeg"/>
-                
-                </div>
-                </div>
+         <div class="gallerywrap">
+         <div class="gallery">
+           <div class="gallery-overlay"></div>
+           <h3 class="gallery-header">Contact us</h3>
+           <img src="/services.jpeg"/>
+           <img src="/gal2.jpeg"/>
+           <img src="/gal3.jpeg"/>
+           <img src="/gal4.jpeg"/>
+         </div>
+       </div>
         )}
       </div>
     </div>
