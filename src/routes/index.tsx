@@ -11,7 +11,7 @@ const gradientOverlayStyle = `
     rgba(255, 255, 255, 0.5) 0%,
     rgba(90, 173, 39, 0.5) 45%,
     rgba(51, 121, 9, 0.5) 91%
-  ), url('/unbw.jpg');
+  ), url('/picture.jpg');
   background-size: cover;
 `;
 
