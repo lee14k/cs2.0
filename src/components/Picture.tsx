@@ -1,11 +1,38 @@
+import { createSignal, onCleanup } from 'solid-js';
+
 const pictureStyles = `
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  background-position: center center;  
+  background-repeat: no-repeat;        
+  background-size: cover; 
+  height:500px;
 `;
 
+const images = [
+  "/unbw.jpg",
+  "/gal3.jpeg",
+  "/gal2.jpeg",
+  // Add more images as needed
+];
+
 export default function Picture() {
+  const [activeIndex, setActiveIndex] = createSignal(0);
+
+  const nextImage = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  // Start the timer as soon as the component mounts
+  const timer = setInterval(nextImage, 1700); // Change every 2 seconds
+
+  // Cleanup the timer when the component is unmounted
+  onCleanup(() => {
+    clearInterval(timer);
+  });
+
   return (
     <div class="bigwrap">
       <div class="picturewrapper">
@@ -23,13 +50,7 @@ export default function Picture() {
               border-radius:50px;
               margin-top:20px;
               margin-bottom:20px;
-              background-image:radial-gradient(
-                circle,
-                rgba(90, 173, 39, 0.7) 5%,
-                rgba(101, 164, 63, 0.7) 66%,
-                rgba(1, 83, 60, 0.7) 100%
-              ),  url("/unbw.jpg");
-
+              background-image:url(${images[activeIndex()]});
             }
 
             .picturewrapper::before {
@@ -40,7 +61,6 @@ export default function Picture() {
               width: 100%;
               height: 120%;
               background: rgb(90, 173, 39);
-              
               z-index: -1;
             }
 
@@ -66,9 +86,7 @@ export default function Picture() {
             }
           `}
         </style>
-        
       </div>
-    
     </div>
   );
 }

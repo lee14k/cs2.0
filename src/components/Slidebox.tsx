@@ -10,6 +10,7 @@ const buttonStyles = `
   border: solid #99A66D;
   border-radius: 4px;
   cursor: pointer;
+  font-size:32px;
 `;
 
 const boxStyles = `
@@ -49,8 +50,7 @@ const galleryWrap = `
 display:flex;
 `;
 
-export default function Slidebox({ title, galleryPosition = "left" }: {title:string, galleryPosition?:string}) {
-  const galleryOnRight = galleryPosition === "right";
+export default function Slidebox({ title}: {title:string, galleryPosition?:string}) {
 
   return (
     <div class="bodyslide">
@@ -81,23 +81,12 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
         `}
       </style>
 
-      <div class="slidebox-with-gallery">
-        {galleryOnRight && (
-          <div class="gallerywrap">
-            <div class="gallery">
-              <div class="gallery-overlay"></div>
-              <h3 class="gallery-header">Contact us</h3>
-              <img src="/services.jpeg"/>
-              <img src="/gal2.jpeg"/>
-              <img src="/gal3.jpeg"/>
-              <img src="/gal4.jpeg"/>
-            </div>
-          </div>
-        )}
+      
 
-        <div class={`slidebox ${galleryOnRight ? "order-2" : ""}`}>
+        <div >
           <h2 class="text-4xl">{title}</h2>
-          <p>
+          <p class="slidep
+          \">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
             ipsam iste eos! Voluptas, possimus dolores? Repellendus, earum quam
             labore optio, debitis illo corrupti non animi explicabo ipsa, nulla
@@ -108,7 +97,6 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
           </A>
         </div>
 
-        {!galleryOnRight && (
          <div class="gallerywrap">
          <div class="gallery">
            <div class="gallery-overlay"></div>
@@ -119,8 +107,8 @@ export default function Slidebox({ title, galleryPosition = "left" }: {title:str
            <img src="/gal4.jpeg"/>
          </div>
        </div>
-        )}
+        
       </div>
-    </div>
+  
   );
 }

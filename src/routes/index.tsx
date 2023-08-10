@@ -8,10 +8,10 @@ const gradientOverlayStyle = `
   position: relative;
   background-image: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.5) 0%,
-    rgba(90, 173, 39, 0.5) 45%,
-    rgba(51, 121, 9, 0.5) 91%
-  ), url('/picture.jpg');
+    rgba(51, 121, 9, 0.7) 0%,
+    rgba(90, 173, 39, 0.7) 45%,
+    rgba(255, 255, 255, 0.7) 91%
+  ), url('/conflict.jpeg');
   background-size: cover;
 `;
 
@@ -25,22 +25,21 @@ const overlayBeforeStyle = `
   z-index: -1;
 `;
 
-const textStyles = `
-  position: relative;
-  z-index: 2;
-  -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-`;
 
 const buttonStyles = `
   background-color: #B2BB91;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px;
   border: solid #99A66D;
   border-radius: 4px;
   cursor: pointer;
-  
+  -webkit-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+  margin-left:20px;
 `;
+
+
 
 export default function Home() {
   const location = useLocation();
@@ -50,7 +49,7 @@ export default function Home() {
 
   const headerClass = `header `;
   const overlayBeforeClass = `overlay-before`;
-  const h1Class = `text-6xl font-bold text-white`
+  const h1Class = `text-6xl font-bold text-white problem`
   const h1Special = `text-6xl font-bold text-green`
   const pClass = `pt-10`;
 
@@ -73,12 +72,9 @@ export default function Home() {
         </style>
         <div class={overlayBeforeClass}></div>
         <div class="frostedglasshead"> <h1 class={h1Class}>
-Got a problem? We'll help you solve it. 
+Got a problem? Let's solve it. 
         </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore nihil
-          quas eius est quia laudantium facere natus
-        </p>
+       
         <p class={pClass}>
           <A class="contact-button" href="/contact">
             Contact Us
@@ -89,14 +85,11 @@ Got a problem? We'll help you solve it.
       <Picture/>
       <div class="slideboxwrap">
       <div class="custom-shape-divider-top-1689460367">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
-    </svg>
+    
 </div>
 
       <div class="slideboxcontainer">
       <Slidebox  title="Mediation"/>
-      <Slidebox   title="Conflict Resolution"galleryPosition="right"/>
       <div class="custom-shape-divider-bottom-1689460589">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
