@@ -119,92 +119,11 @@ const footerNavigation = {
   ],
 }
 
-export default function Example() {
+export default function Aboutme() {
 
   return (
-    <div class="bg-gray-900">
-      {/* Header */}
-      <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only">Your Company</span>
-              <img
-                class="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button
-              type="button"
-              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span class="sr-only">Open main menu</span>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a key={item.name} href={item.href} class="text-sm font-semibold leading-6 text-white">
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" class="text-sm font-semibold leading-6 text-white">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </nav>
-        <Dialog as="div" class="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-          <div class="fixed inset-0 z-50" />
-          <Dialog.Panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Your Company</span>
-                <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt=""
-                />
-              </a>
-              <button
-                type="button"
-                class="-m-2.5 rounded-md p-2.5 text-gray-400"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span class="sr-only">Close menu</span>
-                <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/25">
-                <div class="space-y-2 py-6">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div class="py-6">
-                  <a
-                    href="#"
-                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-800"
-                  >
-                    Log in
-                  </a>
-                </div>
-              </div>
-            </div>
-          </Dialog.Panel>
-        </Dialog>
-      </header>
+    <div class="bg-emerald-900">
+    
 
       <main class="relative isolate">
         {/* Background */}
@@ -212,13 +131,7 @@ export default function Example() {
           class="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
           aria-hidden="true"
         >
-          <div
-            class="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
-            style={{
-              clipPath:
-                'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
-            }}
-          />
+         
         </div>
 
         {/* Header section */}
@@ -309,7 +222,7 @@ export default function Example() {
         </div>
 
         {/* CTA section */}
-        <div class="relative isolate -z-10 mt-32 sm:mt-40">
+        <div class="relative isolate -z-10 mt-32 sm:mt-40 pb-0.5">
           <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
               <img
@@ -319,7 +232,7 @@ export default function Example() {
               />
               <div class="w-full flex-auto">
                 <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our team</h2>
-                <p class="mt-6 text-lg leading-8 text-gray-300">
+                <p class="mt-6 text-lg leading-8 text-gray-300 ">
                   Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis
                   in accusamus quisquam.
                 </p>
@@ -329,7 +242,7 @@ export default function Example() {
                 >
                   {benefits.map((benefit) => (
                     <li key={benefit} class="flex gap-x-3">
-                      <CheckCircleIcon class="h-7 w-5 flex-none" aria-hidden="true" />
+                      
                       {benefit}
                     </li>
                   ))}
@@ -343,105 +256,16 @@ export default function Example() {
             </div>
           </div>
           <div
-            class="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
+            class="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl pb-0.5"
             aria-hidden="true"
           >
-            <div
-              class="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
-              style={{
-                clipPath:
-                  'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
-              }}
-            />
+         
           </div>
         </div>
       </main>
 
       {/* Footer */}
-      <footer class="relative mt-32 sm:mt-40" aria-labelledby="footer-heading">
-        <h2 id="footer-heading" class="sr-only">
-          Footer
-        </h2>
-        <div class="mx-auto max-w-7xl px-6 pb-8 lg:px-8">
-          <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div class="space-y-8">
-              <img
-                class="h-7"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Company name"
-              />
-              <p class="text-sm leading-6 text-gray-300">
-                Est error fuga modi error. Laborum eum nobis porro cupiditate et quo.
-              </p>
-              <div class="flex space-x-6">
-                {footerNavigation.social.map((item) => (
-                  <a key={item.name} href={item.href} class="text-gray-500 hover:text-gray-400">
-                    <span class="sr-only">{item.name}</span>
-                    <item.icon class="h-6 w-6" aria-hidden="true" />
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-              <div class="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 class="text-sm font-semibold leading-6 text-white">Solutions</h3>
-                  <ul role="list" class="mt-6 space-y-4">
-                    {footerNavigation.solutions.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} class="text-sm leading-6 text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div class="mt-10 md:mt-0">
-                  <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
-                  <ul role="list" class="mt-6 space-y-4">
-                    {footerNavigation.support.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} class="text-sm leading-6 text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div class="md:grid md:grid-cols-2 md:gap-8">
-                <div>
-                  <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
-                  <ul role="list" class="mt-6 space-y-4">
-                    {footerNavigation.company.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} class="text-sm leading-6 text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div class="mt-10 md:mt-0">
-                  <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
-                  <ul role="list" class="mt-6 space-y-4">
-                    {footerNavigation.legal.map((item) => (
-                      <li key={item.name}>
-                        <a href={item.href} class="text-sm leading-6 text-gray-300 hover:text-white">
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-            <p class="text-xs leading-5 text-gray-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   )
 }

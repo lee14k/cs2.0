@@ -84,9 +84,7 @@ Got a problem? Let's solve it.
       </div>
       <Picture/>
       <div class="slideboxwrap">
-      <div class="custom-shape-divider-top-1689460367">
     
-</div>
 
       <div class="slideboxcontainer">
       <Slidebox  title="Mediation"/>

@@ -15,7 +15,6 @@ export default function Footer() {
           </ul>
         </div>
         <div class="contactwrap">
-          <h4 class="pb-10 text-2xl">We're here for you</h4>
           <A class="contact-button footerbutton" href="/contact">
             Contact Us
           </A>

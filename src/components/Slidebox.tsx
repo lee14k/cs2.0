@@ -83,7 +83,7 @@ export default function Slidebox({ title}: {title:string, galleryPosition?:strin
 
       
 
-        <div >
+        <div class="homewrap" >
           <h2 class="text-4xl">{title}</h2>
           <p class="slidep
           \">
