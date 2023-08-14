@@ -1,9 +1,10 @@
 import { createSignal } from "solid-js";
-import { chevronDown } from "solid-heroicons/solid";
+  const [submissionStatus, setSubmissionStatus] = createSignal('idle'); // 'idle', 'sending', 'success', 'error'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
 
 export default function ContactUs() {
   const [agreed, setAgreed] = createSignal(false);
@@ -16,8 +17,45 @@ export default function ContactUs() {
   const [phoneNumber, setPhoneNumber] = createSignal("");
   const [country, setCountry] = createSignal("US");
   const [message, setMessage] = createSignal("");
+  async function handleSubmit (event) {
+
+  event.preventDefault();
+  setSubmissionStatus('sending');
+     const formData = {
+        firstName: firstName(),
+        lastName: lastName(),
+        company: company(),
+        email: email(),
+        phoneNumber: phoneNumber(),
+        country: country(),
+        message: message()
+    };
+        try {
+        const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            setSubmissionStatus('success');
+        } else {
+            setSubmissionStatus('error');
+        }
+    } catch (error) {
+        console.error('Error submitting the form:', error);
+        setSubmissionStatus('error');
+    }
+}
   return (
     <div class="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div class="mt-5">
+    {submissionStatus() === 'sending' && <span>Sending...</span>}
+    {submissionStatus() === 'success' && <span>Your message has been sent! We'll get back to you soon.</span>}
+    {submissionStatus() === 'error' && <span>Oops! Something went wrong. Please try again.</span>}
+</div>
       <div
         class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -30,7 +68,7 @@ export default function ContactUs() {
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
       </div>
-      <form class="mx-auto mt-16 max-w-xl sm:mt-20">
+      <form onSubmit={handleSubmit} class="mx-auto mt-16 max-w-xl sm:mt-20">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label
