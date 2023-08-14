@@ -107,10 +107,17 @@ nav {
     backdrop-filter: blur(10px);
   }
 }
+<<<<<<< HEAD
 
 
 
 
+=======
+
+
+
+
+>>>>>>> main
 .footer {
   margin-top:50px;
   width:100%;
@@ -169,6 +176,7 @@ align-items: center;
 
 .custom-shape-divider-bottom-1689457423 .shape-fill {
   fill: rgb(165,187,151);
+<<<<<<< HEAD
 }
 .slideboxcontainer {
   background: rgb(165,187,151);
@@ -228,3 +236,57 @@ padding-top:50px;
   padding-bottom:5px;
 
 }
+=======
+}
+.slideboxcontainer {
+  background: rgb(165,187,151);
+background: linear-gradient(184deg, rgba(165,187,151,1) 5%, rgba(157,187,139,1) 31%, rgba(98,147,69,1) 66%, rgba(1,83,60,1) 100%);
+padding-top:20px;
+}
+
+.custom-shape-divider-top-1689460367 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1689460367 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-top-1689460367 .shape-fill {
+  fill: #ffffff;
+}
+
+.slideboxwrap{
+  position:relative;
+}
+
+.custom-shape-divider-bottom-1689460589 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1689460589 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1689460589 .shape-fill {
+  fill: #FFFFFF;
+}
+
+>>>>>>> main

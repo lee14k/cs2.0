@@ -8,10 +8,17 @@ const gradientOverlayStyle = `
   position: relative;
   background-image: linear-gradient(
     90deg,
+<<<<<<< HEAD
     rgba(51, 121, 9, 0.7) 0%,
     rgba(90, 173, 39, 0.7) 45%,
     rgba(255, 255, 255, 0.7) 91%
   ), url('/conflict.jpeg');
+=======
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(90, 173, 39, 0.5) 45%,
+    rgba(51, 121, 9, 0.5) 91%
+  ), url('/picture.jpg');
+>>>>>>> main
   background-size: cover;
 `;
 
@@ -72,7 +79,11 @@ export default function Home() {
         </style>
         <div class={overlayBeforeClass}></div>
         <div class="frostedglasshead"> <h1 class={h1Class}>
+<<<<<<< HEAD
 Got a problem? Let's solve it. 
+=======
+Got a problem? We'll help you solve it. 
+>>>>>>> main
         </h1>
        
         <p class={pClass}>
@@ -85,11 +96,21 @@ Got a problem? Let's solve it.
       <Picture/>
       <div class="slideboxwrap">
       <div class="custom-shape-divider-top-1689460367">
+<<<<<<< HEAD
     
+=======
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
+    </svg>
+>>>>>>> main
 </div>
 
       <div class="slideboxcontainer">
       <Slidebox  title="Mediation"/>
+<<<<<<< HEAD
+=======
+      <Slidebox   title="Conflict Resolution"galleryPosition="right"/>
+>>>>>>> main
       <div class="custom-shape-divider-bottom-1689460589">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
