@@ -93,7 +93,7 @@ export default function Root() {
                         <A href="/services">Services</A>
                       </li>
                       <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                        <A href="/contact">Contact Us</A>
+                        <A href="/contact">Contact</A>
                       </li>
                     </Show>
                   </>
@@ -114,7 +114,7 @@ export default function Root() {
                       <A href="/services">Services</A>
                     </li>
                     <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                      <A href="/contact">Contact Us</A>
+                      <A href="/contact">Contact</A>
                     </li>
                   </>
                 )}

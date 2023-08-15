@@ -7,7 +7,6 @@ export default function Footer() {
     <div class="footer">
       <div class="footcontent">
         <div class="officewrap text-2xl">
-          <h4>Office</h4>
           <ul>
             <li>755 Baywood Dr.</li>
             <li>Suite 185</li>
@@ -18,7 +17,6 @@ export default function Footer() {
           <A class="contact-button footerbutton" href="/contact">
             Contact Us
           </A>
-          <p class="  text-2xl pt-10">email@email.com</p>
         </div>
         <div class="text-2xl">
           <ul>
