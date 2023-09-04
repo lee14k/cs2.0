@@ -78,9 +78,12 @@
   height: 300px;
   display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 15px 20px 0px rgba(0, 0, 0, 0.75);
+
+  border-radius:25px;
+  justify-content:space-evenly;
+  margin-left:10px;
+  margin-right:10px;
+  align-items:center;
 }
 
 .gallery {
@@ -89,6 +92,23 @@
   justify-content: center;
   align-items: center;
   width: 400px;
+}
+
+.gridbutton {
+    background-color: #E0E0A8;
+  color:#36802D;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+box-shadow: 20px 10px 30px 0px rgba(0,0,0,0.75);
+width:150px;
+}
+
+.gridhead {
+  font-size:32px;
+  margin-left:5px;
 }
 
 .sliderighthead {

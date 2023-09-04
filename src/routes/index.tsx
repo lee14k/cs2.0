@@ -28,15 +28,7 @@ const overlayBeforeStyle = `
 
 
 const buttonStyles = `
-  background-color: #B2BB91;
-  color: #fff;
-  padding: 10px;
-  border: solid #99A66D;
-  border-radius: 4px;
-  cursor: pointer;
-  -webkit-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+ 
   margin-left:20px;
 `;
 

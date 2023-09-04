@@ -72,8 +72,7 @@ export default function ContactUs() {
           Contact Us
         </h2>
         <p class="mt-2 text-lg leading-8 text-gray-600">
-          Aute magna irure deserunt veniam aliqua magna enim voluptate.
-        </p>
+We'll get back to you as soon as possible        </p>
       </div>
       <form onSubmit={handleSubmit} class="mx-auto mt-16 max-w-xl sm:mt-20">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
