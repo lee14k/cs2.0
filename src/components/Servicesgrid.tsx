@@ -4,35 +4,31 @@ export default function Servicesgrid () {
        
 <div class="gridwrapper">
             <div class="griditem">
-                <h2>Mediation Service</h2>
+                <h2>Workplace Mediation</h2>
                 <span>Small blurb</span>
                 <button>Read more</button>
             </div>
             <div class="griditem">
-                <h2>Mediation Service</h2>
+                <h2>Organizational Culture Assessment</h2>
                 <span>Small blurb</span>
                 <button>Read more</button>
             </div>
             <div class="griditem">
-                <h2>Mediation Service</h2>
+                <h2>Bankruptcy Mediation</h2>
                 <span>Small blurb</span>
                 <button>Read more</button>
             </div>
             <div class="griditem">
-                <h2>Mediation Service</h2>
+                <h2>Contract Ombuds</h2>
                 <span>Small blurb</span>
                 <button>Read more</button>
             </div>
             <div class="griditem">
-                <h2>Mediation Service</h2>
+                <h2>Commercial Mediation</h2>
                 <span>Small blurb</span>
                 <button>Read more</button>
             </div>
-            <div class="griditem">
-                <h2>Mediation Service</h2>
-                <span>Small blurb</span>
-                <button>Read more</button>
-            </div>
+       
 </div>
 
 

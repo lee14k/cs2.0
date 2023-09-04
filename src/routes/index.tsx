@@ -4,6 +4,7 @@ import { A } from "solid-start";
 import Slidebox from "~/components/Slidebox";
 import Footer from "~/components/Footer";
 import Picture from "~/components/Picture";
+import Mid from "~/components/Mid";
 const gradientOverlayStyle = `
   position: relative;
   background-image: linear-gradient(
@@ -83,20 +84,10 @@ Got a problem? Let's solve it.
         </div>
       </div>
       <Picture/>
-      <div class="slideboxwrap">
-    
 
-      <div class="slideboxcontainer">
-      <Slidebox  title="Mediation"/>
-      <div class="custom-shape-divider-bottom-1689460589">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M649.97 0L550.03 0 599.91 54.12 649.97 0z" class="shape-fill"></path>
-    </svg>
-</div>
-      </div>
+     
+   <Mid/>
    
-   
-    </div>
     <Footer/>
     </div>
   );

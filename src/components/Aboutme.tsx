@@ -13,10 +13,17 @@ const stats = [
 
 const team = [
   {
-    name: 'Leslie Alexander',
+    name: "Patrick O'Brien",
     role: 'Co-Founder / CEO',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+      './patrickhead.jpg',
+    location: 'Toronto, Canada',
+  },
+    {
+    name: 'Caitlin Phair',
+    role: 'Co-Founder / CEO',
+    imageUrl:
+      './caitlinhead.jpg',
     location: 'Toronto, Canada',
   },
   // More people...
@@ -122,7 +129,7 @@ const footerNavigation = {
 export default function Aboutme() {
 
   return (
-    <div class="bg-emerald-900">
+    <div>
     
 
       <main class="relative isolate">
@@ -137,8 +144,8 @@ export default function Aboutme() {
         {/* Header section */}
         <div class="px-6 pt-14 lg:px-8">
           <div class="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
-            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">We love problem solving</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">
+            <h2 class="text-4xl font-bold tracking-tight text-emerald-700 sm:text-6xl">We love problem solving</h2>
+            <p class="mt-6 text-lg leading-8 text-emerald-400">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
               fugiat veniam occaecat fugiat aliqua.
             </p>
@@ -148,18 +155,38 @@ export default function Aboutme() {
         {/* Content section */}
         <div class="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
+            <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-emerald-700 lg:max-w-none lg:grid-cols-2">
               <div>
-               
-            
+                <p>
+                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
+                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
+                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
+                  semper sed amet vitae sed turpis id.
+                </p>
+                <p class="mt-8">
+                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
+                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
+                  hac adipiscing egestas.
+                </p>
               </div>
-             
+              <div>
+                <p>
+                  Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
+                  eget. Est augue maecenas risus nulla ultrices congue nunc tortor. Enim et nesciunt doloremque nesciunt
+                  voluptate.
+                </p>
+                <p class="mt-8">
+                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
+                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
+                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                </p>
+              </div>
             </div>
             <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
               {stats.map((stat, statIdx) => (
                 <div key={statIdx} class="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6">
                   <dt class="text-base leading-7 text-gray-300">{stat.label}</dt>
-                  <dd class="text-3xl font-semibold tracking-tight text-white">{stat.value}</dd>
+                  <dd class="text-3xl font-semibold tracking-tight text-emerald">{stat.value}</dd>
                 </div>
               ))}
             </dl>
@@ -178,7 +205,28 @@ export default function Aboutme() {
         {/* Values section */}
        
         {/* Team section */}
-        
+          <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+          <div class="mx-auto max-w-2xl lg:mx-0">
+            <h2 class="text-3xl font-bold tracking-tight text-emerald sm:text-4xl">Our team</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300">
+              Excepturi repudiandae alias ut. Totam aut facilis. Praesentium in neque vel omnis. Eos error odio. Qui
+              fugit voluptatibus eum culpa.
+            </p>
+          </div>
+          <ul
+            role="list"
+            class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
+          >
+            {team.map((person) => (
+              <li key={person.name}>
+                <img class="aspect-[14/13] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
+                <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-emerald">{person.name}</h3>
+                <p class="text-base leading-7 text-gray-300">{person.role}</p>
+                <p class="text-sm leading-6 text-gray-500">{person.location}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </main>
 
       {/* Footer */}
