@@ -1,19 +1,19 @@
 
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'Organizational Assessment',
     description:
       'Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.',
     href: '#',
   },
   {
-    name: 'SSL certificates',
+    name: 'Commercial Mediation',
     description:
       'Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.',
     href: '#',
   },
   {
-    name: 'Simple queues',
+    name: 'Contract Ombuds',
     description:
       'Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.',
     href: '#',
@@ -22,17 +22,15 @@ const features = [
 
 export default function Mid() {
   return (
-    <div class="bg-white py-24 sm:py-32">
+    <div class="bg-white sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="text-base font-semibold leading-7 text-indigo-600">Conflict is inevitable</h2>
+          <h2 class="text-base font-semibold leading-7 text-emerald-600">Conflict is inevitable</h2>
           <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             We'll give you the tools and solutions to solve it
           </p>
           <p class="mt-6 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
-          </p>
+           Have a professional dispute? Want to squash conflict before it starts in your organization? We have the experience and knowledge to offer solutions.          </p>
         </div>
         <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">

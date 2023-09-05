@@ -36,8 +36,9 @@ export default function Picture() {
   return (
     <div class="bigwrap">
       <div class="picturewrapper">
-        <h1 class="heading">here for you</h1>
-
+        <h1 class="slideheading">Here for you
+        <span class="slidesub">Empowering clients to crush conflict and embrace solutions</span>
+        </h1>
         <style>
           {`
             .picturewrapper {
@@ -53,36 +54,18 @@ export default function Picture() {
               background-image:url(${images[activeIndex()]});
             }
 
-            .picturewrapper::before {
-              content: "";
-              position: absolute;
-              top: -10%;
-              left: 0;
-              width: 100%;
-              height: 120%;
-              background: rgb(90, 173, 39);
-              z-index: -1;
-            }
+          
 
             .image {
               max-height: 300px;
               max-width: 100%;
             }
 
-            .heading {
-              text-align: center;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              font-size: 24px;
-              color: white;
-              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-              z-index: 1;
-            }
+        
 
             .bigwrap {
               position:relative;
+              margin-top:100px;
             }
           `}
         </style>

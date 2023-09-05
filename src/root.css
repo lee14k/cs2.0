@@ -243,6 +243,7 @@ nav {
   color: #c9df8a;
   text-shadow: 3px 5px 2px #234d20;
   margin-left: 13px;
+  font-size:80px;
 }
 
 .slidep {
@@ -252,6 +253,37 @@ nav {
 .bodyslide {
   display: flex;
   margin-bottom: 50px ;
+}
+
+    .slideheading {
+              text-align: center;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 48px;
+              color: black;
+              text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+              z-index: 1;
+  background: rgba(98, 255, 61, 0.5);
+width:550px;
+height:300px;         
+display:flex;
+flex-direction:column;
+justify-content:center;   
+align-items:center;}
+
+.slidesub {
+  font-size:12px;
+}
+
+.contact-button {
+  background-color:#C7C77F;
+  width:200px;
+padding:20px;
+border-radius:10px;
+
+  font-size:40px;
 }
 
 @media screen and (max-width: 700px) {

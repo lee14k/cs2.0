@@ -5,10 +5,9 @@ const navigation = [
   { name: 'Company', href: '#' },
 ]
 const stats = [
-  { label: 'Business was founded', value: '2012' },
-  { label: 'People on the team', value: '120+' },
-  { label: 'Users on the platform', value: '250k' },
-  { label: 'Paid out to creators', value: '$70M' },
+  { label: 'Business was founded', value: '2023' },
+  { label: 'Trusted experts', value: '2' },
+  { label: 'Years of experience', value: '30+' },
 ]
 
 const team = [
@@ -17,14 +16,12 @@ const team = [
     role: 'Co-Founder / CEO',
     imageUrl:
       './patrickhead.jpg',
-    location: 'Toronto, Canada',
   },
     {
     name: 'Caitlin Phair',
     role: 'Co-Founder / CEO',
     imageUrl:
       './caitlinhead.jpg',
-    location: 'Toronto, Canada',
   },
   // More people...
 ]
@@ -143,7 +140,7 @@ export default function Aboutme() {
 
         {/* Header section */}
         <div class="px-6 pt-14 lg:px-8">
-          <div class="mx-auto max-w-2xl pt-24 text-center sm:pt-40">
+          <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-4xl font-bold tracking-tight text-emerald-700 sm:text-6xl">We love problem solving</h2>
             <p class="mt-6 text-lg leading-8 text-emerald-400">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
