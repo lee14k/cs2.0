@@ -219,7 +219,7 @@ We'll get back to you as soon as possible        </p>
           <div class="flex gap-x-4 sm:col-span-2">
             <label class="text-sm leading-6 text-gray-600">
               By selecting this, you agree to our{" "}
-              <a href="#" class="font-semibold text-emerald-600">
+              <a href="/privacypolicy" class="font-semibold text-emerald-600">
                 privacy&nbsp;policy
               </a>
               .
