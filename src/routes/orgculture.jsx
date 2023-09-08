@@ -8,26 +8,22 @@ export default function Org() {
           <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
             <div>
               <p>
-                Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                semper sed amet vitae sed turpis id.
+                In the dynamic world of business, cultural misalignments can give rise to tensions, miscommunications, and inefficiencies. A culture that once steered a company to success can, over time, become its very impediment. By delving deep into your organizational culture, we help you unearth the invisible barriers to your growth and harmony.
+
+
               </p>
               <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
-                fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                adipiscing egestas.
+              We recognize that every individual is a repository of insights, experiences, and ideas. When assessing organizational culture, the voices of the employees echo the true state of a company’s heart and soul. 
               </p>
             </div>
             <div>
               <p>
-                Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
-                eget. Est augue maecenas risus nulla ultrices congue nunc tortor.
+               By fostering a collaborative partnership between the employees and the corporation, we believe in creating solutions that not only resolve current conflicts but also preempt potential challenges. It's not just about mending; it's about evolving. Together.
+
               </p>
               <p className="mt-8">
-                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor
-                fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+             We believe in priotizing confidentiality, empathetic listening, and flexible platforms in order to accomodate and respect interviewees as much as possible. When assessing organizational culture, the voices of the employees echo the true wellbeing of a company.
+
               </p>
             </div>
           </div>

@@ -64,10 +64,11 @@ export default function Home() {
           `}
         </style>
         <div class={overlayBeforeClass}></div>
-        <div class="frostedglasshead"> <h1 class={h1Class}>
+        <div>
+        <div class="frostedglasshead fade-in"> <h1 class={h1Class}>
 Got a problem? Let's solve it. 
         </h1>
-       
+       </div>
         <p class={pClass}>
           <A class="contact-button" href="/contact">
             Contact Us
@@ -75,7 +76,7 @@ Got a problem? Let's solve it.
         </p>
         </div>
       </div>
-      <Picture/>
+      <Picture />
 
      
    <Mid/>
