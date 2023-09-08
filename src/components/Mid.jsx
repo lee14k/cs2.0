@@ -32,7 +32,7 @@ export default function Mid() {
     const [setRef] = useIntersectionObserver(onIntersect, { threshold: 0.1 });
     refs.push(setRef);
   });
-  const [solveRef] = useIntersectionObserver(element => {
+const [solveRef] = useIntersectionObserver(element => {
     element.classList.add("visible");
 }, { threshold: 0.1 });
 
@@ -43,12 +43,11 @@ export default function Mid() {
           <h2 class="text-base font-semibold leading-7 text-emerald-600">
             Conflict is inevitable
           </h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            We'll give you the tools and solutions to 
-<span class="solve-underline" ref={solveRef}>solve</span>
+         <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+  {"We'll give you the tools and solutions to"} <span class="solve-underline" ref={solveRef}>solve it</span>
 
- it
-          </p>
+</p>
+
           <p class="mt-6 text-lg leading-8 text-gray-600">
             Have a professional dispute? Want to squash conflict before it
             starts in your organization? We have the experience and knowledge to
