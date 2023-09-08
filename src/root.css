@@ -240,8 +240,7 @@ nav {
 }
 
 .problem {
-  color: #c9df8a;
-  text-shadow: 3px 5px 2px #234d20;
+  color: #2e4014;
   margin-left: 13px;
   font-size:80px;
 }
@@ -300,7 +299,27 @@ border-radius:10px;
   }
 }
 .fade-in {
-    animation: fadeIn 2s ease forwards;
+    animation: fadeIn 3s ease forwards;
+}
+.solve-underline {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.solve-underline:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;  /* Adjust this to fit the color you want */
+  transition: width 0.3s ease-in-out;
+}
+
+.solve-underline.visible:before {
+  width: 100%;
 }
 
 .visible {

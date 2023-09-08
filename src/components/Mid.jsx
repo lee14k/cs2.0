@@ -32,6 +32,10 @@ export default function Mid() {
     const [setRef] = useIntersectionObserver(onIntersect, { threshold: 0.1 });
     refs.push(setRef);
   });
+  const [solveRef] = useIntersectionObserver(element => {
+    element.classList.add("visible");
+}, { threshold: 0.1 });
+
   return (
     <div class="bg-white sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -40,7 +44,10 @@ export default function Mid() {
             Conflict is inevitable
           </h2>
           <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            We'll give you the tools and solutions to solve it
+            We'll give you the tools and solutions to 
+<span class="solve-underline" ref={solveRef}>solve</span>
+
+ it
           </p>
           <p class="mt-6 text-lg leading-8 text-gray-600">
             Have a professional dispute? Want to squash conflict before it

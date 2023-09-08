@@ -9,10 +9,10 @@ const gradientOverlayStyle = `
   position: relative;
   background-image: linear-gradient(
     90deg,
-    rgba(51, 121, 9, 0.7) 0%,
-    rgba(90, 173, 39, 0.7) 45%,
+    rgba(51, 121, 9, 0.4) 0%,
+    rgba(90, 173, 39, 0.4) 45%,
     rgba(255, 255, 255, 0.7) 91%
-  ), url('/conflict.jpeg');
+  ), url('/cstab1.jpg');
   background-size: cover;
 `;
 
