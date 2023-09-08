@@ -11,7 +11,7 @@ const gradientOverlayStyle = `
     90deg,
     rgba(51, 121, 9, 0.4) 0%,
     rgba(90, 173, 39, 0.4) 45%,
-    rgba(255, 255, 255, 0.7) 91%
+    rgba(255, 255, 255, 0.5) 91%
   ), url('/cstab1.jpg');
   background-size: cover;
 `;
