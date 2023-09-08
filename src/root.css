@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .logo {
   width: 300px;
   height: 300px;
@@ -45,7 +46,7 @@
       rgba(90, 173, 39, 0.5) 45%,
       rgba(255, 255, 255, 0.7) 91%
     ),
-    url("/about.jpeg");
+    url("/aboutcsnew.jpg");
 }
 
 .background-services {
@@ -271,7 +272,7 @@ nav {
               color: black;
               text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
               z-index: 1;
-  background: rgba(98, 255, 61, 0.5);
+  background: rgba(255, 255, 255, 0.5);
 width:550px;
 height:300px;         
 display:flex;

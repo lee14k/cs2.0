@@ -4,20 +4,19 @@ const features = [
   {
     name: "Organizational Assessment",
     description:
-      "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
-    href: "#",
+      "Organizational conflicts can arise from various sources, be it individual personalities, team dynamics, or structural issues. Regular conflict assessments can identify potential trouble spots, thereby allowing for proactive resolution and fostering a harmonious working environment.",
+    href: "/orgculture",
   },
   {
     name: "Commercial Mediation",
     description:
-      "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
-    href: "#",
+      "Our goal is to provide an impartial platform where parties can freely express their concerns, find common ground, and reach mutually beneficial solutions, ensuring that the business thrives and conflict is resolved.",
+    href: "/commercial",
   },
   {
     name: "Contract Ombuds",
-    description:
-      "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
-    href: "#",
+    description:"For smaller enterprises without a dedicated Human Resources team, a Contract Ombuds emerges as a pivotal resource, enabling employees to navigate workplace concerns. ",
+        href: "/contract",
   },
 ];
 

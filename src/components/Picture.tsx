@@ -12,7 +12,7 @@ const pictureStyles = `
 `;
 
 const images = [
-  "/unbw.jpg",
+  "/csconf.jpg",
   "/gal3.jpeg",
   "/gal2.jpeg",
   // Add more images as needed
