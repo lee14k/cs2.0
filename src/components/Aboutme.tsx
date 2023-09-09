@@ -141,10 +141,10 @@ export default function Aboutme() {
         {/* Header section */}
         <div class="px-6 pt-14 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl font-bold tracking-tight text-emerald-700 sm:text-6xl">We love problem solving</h2>
-            <p class="mt-6 text-lg leading-8 text-emerald-400">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
+            <h2 class="text-4xl font-bold tracking-tight text-black sm:text-6xl">We love problem solving</h2>
+            <p class="mt-6 text-lg leading-8 text-emerald-600">
+             We understand that every dispute is unique, just as every individual or business involved has their own set of values, concerns, and desired outcomes. Our methodological approach is rooted in respect, listening, and creating an environment conducive to open dialogue.
+
             </p>
           </div>
         </div>
@@ -155,31 +155,27 @@ export default function Aboutme() {
             <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-emerald-700 lg:max-w-none lg:grid-cols-2">
               <div>
                 <p>
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet
-                  vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque
-                  erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris
-                  semper sed amet vitae sed turpis id.
+                  We're dedicated to making the mediation process smooth, efficient, and beneficial for all parties involved. Our vast legal expertise combined with our genuine passion for mediation ensures that you're in capable hands.
+
+
                 </p>
-                <p class="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas.
+                <p class="mt-8 text-black">
+               We have a special interest and focus on corporate general counsel work and litigation, including complex construction, automobile, product liability, professional liability, business, probate, insurance, elder abuse, employment and forensic accounting matters. 
                 </p>
               </div>
               <div>
-                <p>
-                  Erat pellentesque dictumst ligula porttitor risus eget et eget. Ultricies tellus felis id dignissim
-                  eget. Est augue maecenas risus nulla ultrices congue nunc tortor. Enim et nesciunt doloremque nesciunt
-                  voluptate.
+                <p class="text-black">
+                 Our legal expertise and advisory process gives clients the information they need to make smart decisions. We always consider bottom-line concerns when assessing conflict resolution options and deliver cost-effective representation to each business we serve.
+
+
                 </p>
-                <p class="mt-8">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie
-                  auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices
-                  hac adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
+                <p class="mt-8 ">
+                 With all of our practice areas, we employ a client focused approach to conflict and organizational assessment, with a focus on early resolution where possible.
+
                 </p>
               </div>
             </div>
-            <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
+            <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-1 sm:gap-y-16 lg:mt-28 lg:grid-cols-3">
               {stats.map((stat, statIdx) => (
                 <div key={statIdx} class="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6">
                   <dt class="text-base leading-7 text-gray-300">{stat.label}</dt>
@@ -206,17 +202,18 @@ export default function Aboutme() {
           <div class="mx-auto max-w-2xl lg:mx-0">
             <h2 class="text-3xl font-bold tracking-tight text-emerald sm:text-4xl">Our team</h2>
             <p class="mt-6 text-lg leading-8 text-gray-300">
-              Excepturi repudiandae alias ut. Totam aut facilis. Praesentium in neque vel omnis. Eos error odio. Qui
-              fugit voluptatibus eum culpa.
+          Founded by Patrick O'Brian, and Caitlin Phair, seasoned lawyers with over 30 combined years in the legal realm, our company was birthed from a shared passion: to harness the power of effective communication and understanding in conflict resolution.
             </p>
           </div>
           <ul
             role="list"
-            class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
+            class="mx-auto mt-20 grid grid-cols-2 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2"
           >
             {team.map((person) => (
               <li key={person.name}>
-                <img class="aspect-[14/13] w-full rounded-2xl object-cover" src={person.imageUrl} alt="" />
+                <div class="imgcontain">
+                <img class="rounded-2xl aboutpic" src={person.imageUrl} alt="" />
+                </div>
                 <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-emerald">{person.name}</h3>
                 <p class="text-base leading-7 text-gray-300">{person.role}</p>
                 <p class="text-sm leading-6 text-gray-500">{person.location}</p>
