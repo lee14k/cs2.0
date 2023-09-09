@@ -38,7 +38,7 @@ export default function Home() {
   const location = useLocation();
 
   const active = (path: string) =>
-    path === location.pathname ? "text-blue-600 mx-1.5 sm:mx-6" : "text-black mx-1.5 sm:mx-6";
+    path === location.pathname ? "text-emerald-600 mx-1.5 sm:mx-6" : "text-black mx-1.5 sm:mx-6";
 
   const headerClass = `header `;
   const overlayBeforeClass = `overlay-before`;

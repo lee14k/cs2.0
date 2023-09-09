@@ -29,7 +29,7 @@ export default function Root() {
   }
   
   const location = useLocation();
-  const active = (path: string) => (path === location.pathname ? 'border-sky-600' : 'border-transparent');
+  const active = (path: string) => (path === location.pathname ? 'border-emerald-400' : 'border-transparent');
 
   const [isMobile, setIsMobile] = createSignal<boolean>(false);
   const [showMobile, setShowMobile] = createSignal<boolean>(false);

@@ -16,7 +16,7 @@ export default function HeaderImage({ heading, page }: { heading: string, page: 
     const backgroundImageClass = getBackgroundImageClass(page);
     return (
         <div class={`header-image ${backgroundImageClass}`}>
-          <h1>{heading}</h1>
+          <h1 class="fade-in">{heading}</h1>
         </div>
       );
     }

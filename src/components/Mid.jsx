@@ -5,18 +5,18 @@ const features = [
     name: "Organizational Assessment",
     description:
       "Organizational conflicts can arise from various sources, be it individual personalities, team dynamics, or structural issues. Regular conflict assessments can identify potential trouble spots, thereby allowing for proactive resolution and fostering a harmonious working environment.",
-    href: "/orgculture",
+    href: "/organizationalculture",
   },
   {
-    name: "Commercial Mediation",
+    name: "Mediation",
     description:
       "Our goal is to provide an impartial platform where parties can freely express their concerns, find common ground, and reach mutually beneficial solutions, ensuring that the business thrives and conflict is resolved.",
-    href: "/commercial",
+    href: "/mediation",
   },
   {
-    name: "Contract Ombuds",
+    name: "Arbitration",
     description:"For smaller enterprises without a dedicated Human Resources team, a Contract Ombuds emerges as a pivotal resource, enabling employees to navigate workplace concerns. ",
-        href: "/contract",
+        href: "/arbitration",
   },
 ];
 
@@ -65,7 +65,7 @@ const [solveRef] = useIntersectionObserver(element => {
                   <p class="mt-6">
                     <a
                       href={feature.href}
-                      class="text-sm font-semibold leading-6 text-indigo-600"
+                      class="text-sm font-semibold leading-6 text-emerald-700"
                     >
                       Learn more <span aria-hidden="true">→</span>
                     </a>
