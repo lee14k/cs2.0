@@ -6,6 +6,7 @@ import Footer from "~/components/Footer"
 export default function Contact() {
   return (
    <div>
+    <HeaderImage heading="Contact" page="contact" />
 <ContactUs />
 <Footer/>
    </div>

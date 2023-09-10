@@ -69,7 +69,7 @@ export default function Root() {
                   <>
                     <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
                       <A href="/">
-                        <img src="/cslogotransparent.png" />
+                        <img src="/newlogov2.png" />
                       </A>
                     </li>
                     <Show when={showMobile()}>
@@ -107,7 +107,7 @@ export default function Root() {
                     </li>
                     <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
                       <A href="/">
-                        <img src="/cslogotransparent.png" />
+                        <img src="/newlogov2.png" />
                       </A>
                     </li>
                     <li class={`border-b-2 ${active('/services')} mx-1.5 sm:mx-6`}>

@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 .logo {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 .header {
   display: flex;
@@ -271,7 +271,7 @@ nav {
               color: black;
               text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
               z-index: 1;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
 width:550px;
 height:300px;         
 display:flex;
@@ -280,7 +280,13 @@ justify-content:center;
 align-items:center;}
 
 .slidesub {
-  font-size:12px;
+  font-size:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:10px;
+  align-items:center;
+
 }
 
 .contact-button {
@@ -352,6 +358,25 @@ border-radius:10px;
   padding-left:50px;
   padding-right:50px;
 }
+
+.secbut {
+   background-color: #E0E0A8;
+  color:#36802D;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 15px 20px 0px rgba(0,0,0,0.75);
+box-shadow: 20px 10px 30px 0px rgba(0,0,0,0.75);
+width:150px;
+font-family: 'Poppins', sans-serif;
+}
+
+.abouthead {
+  margin-left: 13px;
+  font-size:80px;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15)
+}
 @media screen and (max-width: 700px) {
   body {
     display: flex;
@@ -374,5 +399,10 @@ border-radius:10px;
   .homewrap {
     display: flex;
     flex-direction: column;
+  }
+
+  .gridwrapper {
+    display:flex;
+    flex-direction:column;
   }
 }

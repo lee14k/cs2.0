@@ -1,4 +1,4 @@
-import { createSignal, onCleanup } from 'solid-js';
+import { createSignal, onCleanup } from "solid-js";
 
 const pictureStyles = `
   display: flex;
@@ -14,6 +14,7 @@ const pictureStyles = `
 const images = [
   "/csconf.jpg",
   "/gal3.jpeg",
+  "/csslider4.jpg",
   "/gal2.jpeg",
   // Add more images as needed
 ];
@@ -36,8 +37,15 @@ export default function Picture() {
   return (
     <div class="bigwrap">
       <div class="picturewrapper">
-        <h1 class="slideheading">Here for you
-        <span class="slidesub">Empowering clients to crush conflict and embrace solutions</span>
+        <h1 class="slideheading">
+          Here for you
+          <span class="slidesub">
+            Empowering clients to crush conflict and embrace solutions
+                    <button class="secbut">Learn More</button>
+
+          </span>
+       
+  
         </h1>
         <style>
           {`
@@ -69,7 +77,9 @@ export default function Picture() {
             }
           `}
         </style>
+        
       </div>
+      
     </div>
   );
 }

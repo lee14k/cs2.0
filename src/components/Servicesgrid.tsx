@@ -5,7 +5,7 @@ export default function Servicesgrid() {
     <div>
       <div class="gridwrapper">
         <div class="griditem">
-          <h2 class="gridhead">Mediation</h2>
+          <h2 class="gridhead ">Mediation</h2>
           <A href="/mediation">
             <button class="gridbutton">Read more</button>
           </A>

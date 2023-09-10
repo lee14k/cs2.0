@@ -1,13 +1,13 @@
 function getBackgroundImageClass(page: string): string {
     switch (page) {
       case 'about':
-        return 'background-about';
+        return 'background-about fade-in';
       case 'services':
-        return 'background-services';
+        return 'background-services fade-in';
       case 'contact':
-        return 'background-contact';
+        return 'background-contact fade-in';
       default:
-        return 'background-default'; // Default class if no specific condition is met
+        return 'background-default fade-in'; // Default class if no specific condition is met
     }
   }
 
@@ -16,7 +16,7 @@ export default function HeaderImage({ heading, page }: { heading: string, page: 
     const backgroundImageClass = getBackgroundImageClass(page);
     return (
         <div class={`header-image ${backgroundImageClass}`}>
-          <h1 class="fade-in">{heading}</h1>
+          <h1 class="fade-in problem">{heading}</h1>
         </div>
       );
     }

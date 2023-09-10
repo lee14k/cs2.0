@@ -19,7 +19,7 @@ const team = [
   },
     {
     name: 'Caitlin Phair',
-    role: 'Co-Founder / CEO',
+    role: 'Co-Founder',
     imageUrl:
       './caitlinhead.jpg',
   },
@@ -124,7 +124,11 @@ const footerNavigation = {
 }
 
 export default function Aboutme() {
+  const refs = [];
 
+  const onIntersect = (element) => {
+    element.classList.add("visible");
+  };
   return (
     <div>
     
@@ -141,8 +145,8 @@ export default function Aboutme() {
         {/* Header section */}
         <div class="px-6 pt-14 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl font-bold tracking-tight text-black sm:text-6xl">We love problem solving</h2>
-            <p class="mt-6 text-lg leading-8 text-emerald-600">
+            <h2 class="text-4xl font-bold tracking-tight text-emerald-600 sm:text-6xl">We love problem solving</h2>
+            <p class="mt-6 text-lg leading-8 text-black">
              We understand that every dispute is unique, just as every individual or business involved has their own set of values, concerns, and desired outcomes. Our methodological approach is rooted in respect, listening, and creating an environment conducive to open dialogue.
 
             </p>
@@ -155,13 +159,11 @@ export default function Aboutme() {
             <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-emerald-700 lg:max-w-none lg:grid-cols-2">
               <div>
                 <p>
-                  We're dedicated to making the mediation process smooth, efficient, and beneficial for all parties involved. Our vast legal expertise combined with our genuine passion for mediation ensures that you're in capable hands.
+                  We're dedicated to making the mediation process smooth, efficient, and beneficial for all parties involved. Our vast legal expertise combined with our genuine passion for mediation ensures that you're in capable hands. With all of our practice areas, we employ a client focused approach to conflict and organizational assessment, with a focus on early resolution where possible.
 
 
                 </p>
-                <p class="mt-8 text-black">
-               We have a special interest and focus on corporate general counsel work and litigation, including complex construction, automobile, product liability, professional liability, business, probate, insurance, elder abuse, employment and forensic accounting matters. 
-                </p>
+             
               </div>
               <div>
                 <p class="text-black">
@@ -170,7 +172,7 @@ export default function Aboutme() {
 
                 </p>
                 <p class="mt-8 ">
-                 With all of our practice areas, we employ a client focused approach to conflict and organizational assessment, with a focus on early resolution where possible.
+         
 
                 </p>
               </div>
@@ -178,7 +180,7 @@ export default function Aboutme() {
             <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-1 sm:gap-y-16 lg:mt-28 lg:grid-cols-3">
               {stats.map((stat, statIdx) => (
                 <div key={statIdx} class="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6">
-                  <dt class="text-base leading-7 text-gray-300">{stat.label}</dt>
+                  <dt class="text-base leading-7 text-emerald-500">{stat.label}</dt>
                   <dd class="text-3xl font-semibold tracking-tight text-emerald">{stat.value}</dd>
                 </div>
               ))}
@@ -191,7 +193,7 @@ export default function Aboutme() {
           <img
             src="./aboutcs.jpg"
             alt=""
-            class="aspect-[9/4] w-full object-cover xl:rounded-3xl"
+            class="aspect-[9/4] w-full object-cover xl:rounded-3xl fade-in"
           />
         </div>
 
@@ -201,7 +203,7 @@ export default function Aboutme() {
           <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
             <h2 class="text-3xl font-bold tracking-tight text-emerald sm:text-4xl">Our team</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">
+            <p class="mt-6 text-lg leading-8 text-emerald-600">
           Founded by Patrick O'Brian, and Caitlin Phair, seasoned lawyers with over 30 combined years in the legal realm, our company was birthed from a shared passion: to harness the power of effective communication and understanding in conflict resolution.
             </p>
           </div>
@@ -214,9 +216,9 @@ export default function Aboutme() {
                 <div class="imgcontain">
                 <img class="rounded-2xl aboutpic" src={person.imageUrl} alt="" />
                 </div>
-                <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-emerald">{person.name}</h3>
-                <p class="text-base leading-7 text-gray-300">{person.role}</p>
-                <p class="text-sm leading-6 text-gray-500">{person.location}</p>
+                <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-black">{person.name}</h3>
+                <p class="text-base leading-7 text-emerald-500">{person.role}</p>
+                <p class="text-sm leading-6 text-emerald-600">{person.location}</p>
               </li>
             ))}
           </ul>
