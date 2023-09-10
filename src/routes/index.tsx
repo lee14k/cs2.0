@@ -66,8 +66,7 @@ export default function Home() {
         <div class={overlayBeforeClass}></div>
         <div>
         <div class="frostedglasshead fade-in"> <h1 class={h1Class}>
-Got a problem? Let's solve it. 
-        </h1>
+Finding creative solutions to hard to solve problems        </h1>
        </div>
         <p class={pClass}>
           <A class="contact-button" href="/contact">
