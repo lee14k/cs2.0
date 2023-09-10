@@ -76,7 +76,6 @@ Got a problem? Let's solve it.
         </p>
         </div>
       </div>
-      <Picture />
 
      
    <Mid/>
