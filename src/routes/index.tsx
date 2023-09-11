@@ -26,24 +26,23 @@ const overlayBeforeStyle = `
   z-index: -1;
 `;
 
-
 const buttonStyles = `
  
   margin-left:20px;
 `;
 
-
-
 export default function Home() {
   const location = useLocation();
 
   const active = (path: string) =>
-    path === location.pathname ? "text-emerald-600 mx-1.5 sm:mx-6" : "text-black mx-1.5 sm:mx-6";
+    path === location.pathname
+      ? "text-emerald-600 mx-1.5 sm:mx-6"
+      : "text-black mx-1.5 sm:mx-6";
 
   const headerClass = `header `;
   const overlayBeforeClass = `overlay-before`;
-  const h1Class = `text-6xl font-bold text-white problem`
-  const h1Special = `text-6xl font-bold text-green`
+  const h1Class = `text-6xl font-bold text-white problem`;
+  const h1Special = `text-6xl font-bold text-green`;
   const pClass = `pt-10`;
 
   return (
@@ -65,21 +64,21 @@ export default function Home() {
         </style>
         <div class={overlayBeforeClass}></div>
         <div>
-        <div class="frostedglasshead fade-in"> <h1 class={h1Class}>
-Finding creative solutions to hard to solve problems        </h1>
-       </div>
-        <p class={pClass}>
-          <A class="contact-button" href="/contact">
-            Contact Us
-          </A>
-        </p>
+          <div class="frostedglasshead fade-in">
+            {" "}
+            <h1 class={h1Class}>
+              Finding creative solutions to hard to solve problems{" "}
+            </h1>
+          </div>
+          <p class={pClass}>
+            <A class="contact-button" href="/contact">
+              Contact Us
+            </A>
+          </p>
         </div>
       </div>
-
-     
-   <Mid/>
-   
-    <Footer/>
+      <Mid />
+      <Footer />
     </div>
   );
 }

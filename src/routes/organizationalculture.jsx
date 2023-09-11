@@ -1,31 +1,47 @@
-import Footer from "~/components/Footer"
+import Footer from "~/components/Footer";
 
 export default function Org() {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <p className="text-base font-semibold leading-7 text-emerald-600">Organizational Conflict Assessment</p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Stop Problems Before They Start</h1>
+          <p className="text-base font-semibold leading-7 text-emerald-600">
+            Organizational Conflict Assessment
+          </p>
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Stop Problems Before They Start
+          </h1>
           <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
             <div>
               <p>
-                In the dynamic world of business, cultural misalignments can give rise to tensions, miscommunications, and inefficiencies. A culture that once steered a company to success can, over time, become its very impediment. By delving deep into your organizational culture, we help you unearth the invisible barriers to your growth and harmony.
-
-
+                In the dynamic world of business, cultural misalignments can
+                give rise to tensions, miscommunications, and inefficiencies. A
+                culture that once steered a company to success can, over time,
+                become its very impediment. By delving deep into your
+                organizational culture, we help you unearth the invisible
+                barriers to your growth and harmony.
               </p>
               <p className="mt-8">
-              We recognize that every individual is a repository of insights, experiences, and ideas. When assessing organizational culture, the voices of the employees echo the true state of a company’s heart and soul. 
+                We recognize that every individual is a repository of insights,
+                experiences, and ideas. When assessing organizational culture,
+                the voices of the employees echo the true state of a company’s
+                heart and soul.
               </p>
             </div>
             <div>
               <p>
-               By fostering a collaborative partnership between the employees and the corporation, we believe in creating solutions that not only resolve current conflicts but also preempt potential challenges. It's not just about mending; it's about evolving. Together.
-
+                By fostering a collaborative partnership between the employees
+                and the corporation, we believe in creating solutions that not
+                only resolve current conflicts but also preempt potential
+                challenges. It's not just about mending; it's about evolving.
+                Together.
               </p>
               <p className="mt-8">
-             We believe in priotizing confidentiality, empathetic listening, and flexible platforms in order to accomodate and respect interviewees as much as possible. When assessing organizational culture, the voices of the employees echo the true wellbeing of a company.
-
+                We believe in priotizing confidentiality, empathetic listening,
+                and flexible platforms in order to accomodate and respect
+                interviewees as much as possible. When assessing organizational
+                culture, the voices of the employees echo the true wellbeing of
+                a company.
               </p>
             </div>
           </div>
@@ -34,7 +50,8 @@ export default function Org() {
               href="/contact"
               className="rounded-md bg-emerald-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
             >
-Let's get started            </a>
+              Let's get started{" "}
+            </a>
           </div>
         </div>
       </div>
@@ -50,7 +67,7 @@ Let's get started            </a>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }

@@ -1,67 +1,65 @@
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
-]
+  { name: "Product", href: "#" },
+  { name: "Features", href: "#" },
+  { name: "Marketplace", href: "#" },
+  { name: "Company", href: "#" },
+];
 const stats = [
-  { label: 'Business was founded', value: '2023' },
-  { label: 'Trusted experts', value: '2' },
-  { label: 'Years of experience', value: '30+' },
-]
+  { label: "Business was founded", value: "2023" },
+  { label: "Trusted experts", value: "2" },
+  { label: "Years of experience", value: "30+" },
+];
 
 const team = [
   {
     name: "Patrick O'Brien",
-    role: 'Co-Founder / CEO',
-    imageUrl:
-      './patrickhead.jpg',
+    role: "Co-Founder / CEO",
+    imageUrl: "./patrickhead.jpg",
   },
-    {
-    name: 'Caitlin Phair',
-    role: 'Co-Founder',
-    imageUrl:
-      './caitlinhead.jpg',
+  {
+    name: "Caitlin Phair",
+    role: "Co-Founder",
+    imageUrl: "./caitlinhead.jpg",
   },
   // More people...
-]
+];
 const benefits = [
-  'Competitive salaries',
-  'Flexible work hours',
-  '30 days of paid vacation',
-  'Annual team retreats',
-  'Benefits for you and your family',
-  'A great work environment',
-]
+  "Competitive salaries",
+  "Flexible work hours",
+  "30 days of paid vacation",
+  "Annual team retreats",
+  "Benefits for you and your family",
+  "A great work environment",
+];
 const footerNavigation = {
   solutions: [
-    { name: 'Marketing', href: '#' },
-    { name: 'Analytics', href: '#' },
-    { name: 'Commerce', href: '#' },
-    { name: 'Insights', href: '#' },
+    { name: "Marketing", href: "#" },
+    { name: "Analytics", href: "#" },
+    { name: "Commerce", href: "#" },
+    { name: "Insights", href: "#" },
   ],
   support: [
-    { name: 'Pricing', href: '#' },
-    { name: 'Documentation', href: '#' },
-    { name: 'Guides', href: '#' },
-    { name: 'API Status', href: '#' },
+    { name: "Pricing", href: "#" },
+    { name: "Documentation", href: "#" },
+    { name: "Guides", href: "#" },
+    { name: "API Status", href: "#" },
   ],
   company: [
-    { name: 'About', href: '#' },
-    { name: 'Blog', href: '#' },
-    { name: 'Jobs', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Partners', href: '#' },
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Jobs", href: "#" },
+    { name: "Press", href: "#" },
+    { name: "Partners", href: "#" },
   ],
   legal: [
-    { name: 'Claim', href: '#' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms', href: '#' },
+    { name: "Claim", href: "#" },
+    { name: "Privacy", href: "#" },
+    { name: "Terms", href: "#" },
   ],
   social: [
     {
-      name: 'Facebook',
-      href: '#',
+      name: "Facebook",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -73,8 +71,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'Instagram',
-      href: '#',
+      name: "Instagram",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -86,8 +84,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'Twitter',
-      href: '#',
+      name: "Twitter",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -95,8 +93,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'GitHub',
-      href: '#',
+      name: "GitHub",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -108,8 +106,8 @@ const footerNavigation = {
       ),
     },
     {
-      name: 'YouTube',
-      href: '#',
+      name: "YouTube",
+      href: "#",
       icon: (props) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -121,7 +119,7 @@ const footerNavigation = {
       ),
     },
   ],
-}
+};
 
 export default function Aboutme() {
   const refs = [];
@@ -131,24 +129,25 @@ export default function Aboutme() {
   };
   return (
     <div>
-    
-
       <main class="relative isolate">
         {/* Background */}
         <div
           class="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
           aria-hidden="true"
-        >
-         
-        </div>
+        ></div>
 
         {/* Header section */}
         <div class="px-6 pt-14 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
-            <h2 class="text-4xl font-bold tracking-tight text-emerald-600 sm:text-6xl">We love problem solving</h2>
+            <h2 class="text-4xl font-bold tracking-tight text-emerald-600 sm:text-6xl">
+              We love problem solving
+            </h2>
             <p class="mt-6 text-lg leading-8 text-black">
-             We understand that every dispute is unique, just as every individual or business involved has their own set of values, concerns, and desired outcomes. Our methodological approach is rooted in respect, listening, and creating an environment conducive to open dialogue.
-
+              We understand that every dispute is unique, just as every
+              individual or business involved has their own set of values,
+              concerns, and desired outcomes. Our methodological approach is
+              rooted in respect, listening, and creating an environment
+              conducive to open dialogue.
             </p>
           </div>
         </div>
@@ -159,29 +158,38 @@ export default function Aboutme() {
             <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-emerald-700 lg:max-w-none lg:grid-cols-2">
               <div>
                 <p>
-                  We're dedicated to making the mediation process smooth, efficient, and beneficial for all parties involved. Our vast legal expertise combined with our genuine passion for mediation ensures that you're in capable hands. With all of our practice areas, we employ a client focused approach to conflict and organizational assessment, with a focus on early resolution where possible.
-
-
+                  We're dedicated to making the mediation process smooth,
+                  efficient, and beneficial for all parties involved. Our vast
+                  legal expertise combined with our genuine passion for
+                  mediation ensures that you're in capable hands. With all of
+                  our practice areas, we employ a client focused approach to
+                  conflict and organizational assessment, with a focus on early
+                  resolution where possible.
                 </p>
-             
               </div>
               <div>
                 <p class="text-black">
-                 Our legal expertise and advisory process gives clients the information they need to make smart decisions. We always consider bottom-line concerns when assessing conflict resolution options and deliver cost-effective representation to each business we serve.
-
-
+                  Our legal expertise and advisory process gives clients the
+                  information they need to make smart decisions. We always
+                  consider bottom-line concerns when assessing conflict
+                  resolution options and deliver cost-effective representation
+                  to each business we serve.
                 </p>
-                <p class="mt-8 ">
-         
-
-                </p>
+                <p class="mt-8 "></p>
               </div>
             </div>
             <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-1 sm:gap-y-16 lg:mt-28 lg:grid-cols-3">
               {stats.map((stat, statIdx) => (
-                <div key={statIdx} class="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6">
-                  <dt class="text-base leading-7 text-emerald-500">{stat.label}</dt>
-                  <dd class="text-3xl font-semibold tracking-tight text-emerald">{stat.value}</dd>
+                <div
+                  key={statIdx}
+                  class="flex flex-col-reverse gap-y-3 border-l border-white/20 pl-6"
+                >
+                  <dt class="text-base leading-7 text-emerald-500">
+                    {stat.label}
+                  </dt>
+                  <dd class="text-3xl font-semibold tracking-tight text-emerald">
+                    {stat.value}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -198,13 +206,18 @@ export default function Aboutme() {
         </div>
 
         {/* Values section */}
-       
+
         {/* Team section */}
-          <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
           <div class="mx-auto max-w-2xl lg:mx-0">
-            <h2 class="text-3xl font-bold tracking-tight text-emerald sm:text-4xl">Our team</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-emerald sm:text-4xl">
+              Our team
+            </h2>
             <p class="mt-6 text-lg leading-8 text-emerald-600">
-          Founded by Patrick O'Brian, and Caitlin Phair, seasoned lawyers with over 30 combined years in the legal realm, our company was birthed from a shared passion: to harness the power of effective communication and understanding in conflict resolution.
+              Founded by Patrick O'Brian, and Caitlin Phair, seasoned lawyers
+              with over 30 combined years in the legal realm, our company was
+              birthed from a shared passion: to harness the power of effective
+              communication and understanding in conflict resolution.
             </p>
           </div>
           <ul
@@ -214,11 +227,21 @@ export default function Aboutme() {
             {team.map((person) => (
               <li key={person.name}>
                 <div class="imgcontain">
-                <img class="rounded-2xl aboutpic" src={person.imageUrl} alt="" />
+                  <img
+                    class="rounded-2xl aboutpic"
+                    src={person.imageUrl}
+                    alt=""
+                  />
                 </div>
-                <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-black">{person.name}</h3>
-                <p class="text-base leading-7 text-emerald-500">{person.role}</p>
-                <p class="text-sm leading-6 text-emerald-600">{person.location}</p>
+                <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-black">
+                  {person.name}
+                </h3>
+                <p class="text-base leading-7 text-emerald-500">
+                  {person.role}
+                </p>
+                <p class="text-sm leading-6 text-emerald-600">
+                  {person.location}
+                </p>
               </li>
             ))}
           </ul>
@@ -226,7 +249,6 @@ export default function Aboutme() {
       </main>
 
       {/* Footer */}
-      
     </div>
-  )
+  );
 }
