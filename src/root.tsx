@@ -97,6 +97,12 @@ export default function Root() {
                       <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
                         <A href="/contact">Contact</A>
                       </li>
+                         <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
+                        <A href="/Neutrals">Neutrals</A>
+                      </li>
+                          <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
+                        <A href="/Expertise">Expertise</A>
+                      </li>
                     </Show>
                   </>
                 ) : (
@@ -106,6 +112,9 @@ export default function Root() {
                     </li>
                     <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
                       <A href="/about">About</A>
+                    </li>
+                       <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
+                      <A href="/Expertise">Expertise</A>
                     </li>
                     <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
                       <A href="/">
@@ -117,6 +126,9 @@ export default function Root() {
                     </li>
                     <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
                       <A href="/contact">Contact</A>
+                    </li>
+                       <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
+                      <A href="/Neutrals">Neutrals</A>
                     </li>
                   </>
                 )}

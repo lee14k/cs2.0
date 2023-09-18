@@ -1,6 +1,8 @@
+import Footer from "~/components/Footer";
+
 export default function Privacy() {
   return (
-    <div className="privacywrap p-10 bg-gray-100">
+    <div className="privacywrap p-10 ">
       <h1 className="text-4xl mb-6 font-semibold">Privacy Policy</h1>
       <p className="text-lg mb-3">Last updated: 09/05/2023</p>
 
@@ -89,6 +91,7 @@ export default function Privacy() {
           of any changes by posting the new Privacy Policy on this page
         </p>
       </h2>
+      <Footer/>
     </div>
   );
 }
