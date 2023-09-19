@@ -17,6 +17,14 @@ import "./root.css";
 
 
 export default function Root() {
+    const menuItems = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/services', label: 'Services' },
+    { path: '/contact', label: 'Contact' },
+    { path: '/Neutrals', label: 'Neutrals' },
+    { path: '/Expertise', label: 'Expertise' },
+  ];
 
   function applyGlobalFont(fontUrl: string): void {
     const style = document.createElement('style');
@@ -39,7 +47,7 @@ export default function Root() {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 900);
     };
-
+console.log()
     window.addEventListener('resize', handleResize);
     handleResize();
 
@@ -65,75 +73,29 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-          <nav class="flex">
-              <ul class="container flex justify-center text-2xl text-emerald-700">
-                {isMobile() ? (
-                  <>
-                    <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
-                      <A href="/">
-                        <img src="/newlogov2.png" />
-                      </A>
-                    </li>
-                    <Show when={showMobile()}>
-                      <li
-                        class={`hamburger-icon ${showMobile() ? 'open' : ''}`}
-                        onClick={toggleHamburger}
-                      >
-                        <div class="line" />
-                        <div class="line" />
-                        <div class="line" />
-                      </li>
-                    </Show>
-                    <Show when={showMobile()}>
-                      <li class={`border-b-2 ${active('/')} mx-1.5 sm:mx-6`}>
-                        <A href="/">Home</A>
-                      </li>
-                      <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
-                        <A href="/about">About</A>
-                      </li>
-                      <li class={`border-b-2 ${active('/services')} mx-1.5 sm:mx-6`}>
-                        <A href="/services">Services</A>
-                      </li>
-                      <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                        <A href="/contact">Contact</A>
-                      </li>
-                         <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                        <A href="/Neutrals">Neutrals</A>
-                      </li>
-                          <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                        <A href="/Expertise">Expertise</A>
-                      </li>
-                    </Show>
-                  </>
-                ) : (
-                  <>
-                    <li class={`border-b-2 ${active('/')} mx-1.5 sm:mx-6`}>
-                      <A href="/">Home</A>
-                    </li>
-                    <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
-                      <A href="/about">About</A>
-                    </li>
-                       <li class={`border-b-2 ${active('/about')} mx-1.5 sm:mx-6`}>
-                      <A href="/Expertise">Expertise</A>
-                    </li>
-                    <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
-                      <A href="/">
-                        <img src="/newlogov2.png" />
-                      </A>
-                    </li>
-                    <li class={`border-b-2 ${active('/services')} mx-1.5 sm:mx-6`}>
-                      <A href="/services">Services</A>
-                    </li>
-                    <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                      <A href="/contact">Contact</A>
-                    </li>
-                       <li class={`border-b-2 ${active('/contact')} mx-1.5 sm:mx-6`}>
-                      <A href="/Neutrals">Neutrals</A>
-                    </li>
-                  </>
-                )}
-              </ul>
-            </nav>
+<nav>
+   <ul class={`debug container ${isMobile() ? 'flex-col' : 'flex-row'} justify-center text-2xl text-emerald-700`}>
+      {isMobile() && (
+         <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
+            <img src="/newlogov2.png" />
+         </li>
+      )}
+      <Show when={!isMobile() || showMobile()}>
+         {!isMobile() && (
+         <li class={`border-b-2 mx-1.5 sm:mx-6 logo`}>
+            <A href="/"><img src="/newlogov2.png" /></A>
+         </li>
+      )}
+         {menuItems.map(item => (
+            <li class={`border-b-2 ${active(item.path)} mx-1.5 sm:mx-6`}>
+               <A href={item.path}>{item.label}</A>
+            </li>
+         ))}
+      </Show>
+     
+   </ul>
+</nav>
+
             <Routes>
               <FileRoutes />
             </Routes>

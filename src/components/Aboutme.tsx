@@ -5,9 +5,10 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 const stats = [
+    { label: "", value: "" },
   { label: "Business was founded", value: "2023" },
-  { label: "Trusted experts", value: "2" },
   { label: "Years of experience", value: "30+" },
+      { label: "", value: "" },
 ];
 
 const team = [
@@ -16,11 +17,7 @@ const team = [
     role: "Co-Founder / CEO",
     imageUrl: "./patrickhead.jpg",
   },
-  {
-    name: "Caitlin Phair",
-    role: "Co-Founder",
-    imageUrl: "./caitlinhead.jpg",
-  },
+ 
   // More people...
 ];
 const benefits = [
@@ -105,19 +102,7 @@ const footerNavigation = {
         </svg>
       ),
     },
-    {
-      name: "YouTube",
-      href: "#",
-      icon: (props) => (
-        <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
-          <path
-            fillRule="evenodd"
-            d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-            clipRule="evenodd"
-          />
-        </svg>
-      ),
-    },
+
   ],
 };
 
@@ -178,7 +163,7 @@ export default function Aboutme() {
                 <p class="mt-8 "></p>
               </div>
             </div>
-            <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-1 sm:gap-y-16 lg:mt-28 lg:grid-cols-3">
+            <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 sm:mt-20 sm:grid-cols-1 sm:gap-y-16 lg:mt-28 lg:grid-cols-4">
               {stats.map((stat, statIdx) => (
                 <div
                   key={statIdx}
@@ -214,8 +199,7 @@ export default function Aboutme() {
               Our team
             </h2>
             <p class="mt-6 text-lg leading-8 text-emerald-600">
-              Founded by Patrick O'Brian, and Caitlin Phair, seasoned lawyers
-              with over 30 combined years in the legal realm, our company was
+              Founded by Patrick O'Brian, our company was
               birthed from a shared passion: to harness the power of effective
               communication and understanding in conflict resolution.
             </p>

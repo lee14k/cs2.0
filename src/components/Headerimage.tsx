@@ -6,6 +6,10 @@ function getBackgroundImageClass(page: string): string {
         return 'background-services fade-in';
       case 'contact':
         return 'background-contact fade-in';
+        case 'Expertise':
+        return 'background-expertise fade-in';
+        case 'Neutrals':
+          return 'background-neutrals fade-in';
       default:
         return 'background-default fade-in'; // Default class if no specific condition is met
     }

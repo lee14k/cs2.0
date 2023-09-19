@@ -68,6 +68,24 @@
     ),
     url("/contactus.jpeg");
 }
+.background-expertise {
+  background-image: linear-gradient(
+   90deg,
+      rgba(51, 121, 9, 0.7) 0%,
+      rgba(90, 173, 39, 0.5) 45%,
+      rgba(255, 255, 255, 0.7) 91%
+    ),
+    url("/cstab1.jpg");
+}
+.background-neutrals {
+  background-image: linear-gradient(
+   90deg,
+      rgba(51, 121, 9, 0.7) 0%,
+      rgba(90, 173, 39, 0.5) 45%,
+      rgba(255, 255, 255, 0.7) 91%
+    ),
+    url("/gal3.jpeg");
+}
 
 .gridwrapper {
   display: grid;
@@ -123,6 +141,10 @@ nav {
   height: min-content;
   justify-content: center;
   align-items: center;
+  display:flex;
+}
+nav > ul {
+  display:flex;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -377,6 +399,16 @@ font-family: 'Poppins', sans-serif;
   font-size:80px;
   text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15)
 }
+
+ul.debug {
+  border: 3px solid red;
+}
+
+li.debug {
+  border: 1px solid blue;
+  margin: 5px;
+}
+
 @media screen and (max-width: 700px) {
   body {
     display: flex;
