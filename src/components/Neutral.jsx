@@ -10,12 +10,12 @@ const people = [
   },
   // More people...
 ]
-import Headerimage from '../components/HeaderImage'
+import Headerimage from '../components/Headerimage'
 
 export default function Neutral() {
   return (
     <>
-          <HeaderImage heading="Neutrals" page="Neutrals" />
+          <Headerimage heading="Neutrals" page="Neutrals" />
 
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">

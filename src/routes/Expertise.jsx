@@ -1,5 +1,5 @@
 import Footer from '~/components/Footer'
-import HeaderImage from '~/components/HeaderImage'
+import Headerimage from '~/components/Headerimage'
 const features = [
   {
     name: 'Tort Litigation',
@@ -31,7 +31,7 @@ const features = [
 export default function Expertise() {
   return (
     <>
-          <HeaderImage heading="Expertise" page="Expertise" />
+          <Headerimage heading="Expertise" page="Expertise" />
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
