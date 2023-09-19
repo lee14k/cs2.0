@@ -45,7 +45,7 @@ export default function Root() {
 
   createEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 900);
+      setIsMobile(window.innerWidth <= 1200);
     };
 console.log()
     window.addEventListener('resize', handleResize);
