@@ -220,12 +220,10 @@ export default function Aboutme() {
                 <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-black">
                   {person.name}
                 </h3>
-                <p class="text-base leading-7 text-emerald-500">
+                <p class="text-base leading-7 text-black">
                   {person.role}
                 </p>
-                <p class="text-sm leading-6 text-emerald-600">
-                  {person.location}
-                </p>
+              
               </li>
             ))}
           </ul>

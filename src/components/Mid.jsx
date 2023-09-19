@@ -43,7 +43,7 @@ const [solveRef] = useIntersectionObserver(element => {
             Conflict is inevitable
           </h2>
          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-  {"We'll give you the tools and solutions to"} <span class="solve-underline" ref={solveRef}>solve it</span>
+  {"We'll give you the tools and solutions to"} <br/> <span class="solve-underline" ref={solveRef}>solve it</span>
 
 </p>
 
