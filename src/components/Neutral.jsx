@@ -10,7 +10,7 @@ const people = [
   },
   // More people...
 ]
-import HeaderImage from '../components/HeaderImage'
+import Headerimage from '../components/HeaderImage'
 
 export default function Neutral() {
   return (
