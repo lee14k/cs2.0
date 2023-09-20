@@ -1,5 +1,5 @@
 import Footer from "~/components/Footer";
-
+import Pricing from "~/components/Pricing";
 export default function Arbitration() {
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
@@ -118,6 +118,8 @@ export default function Arbitration() {
           </div>
         </div>
       </div>
+      <Pricing headline="Procedural Arbitration" description= "Procedural Hearings and Motion Practice" inperson="600 " online="550" bighead="Procedural Hearings & Motion Practice"/>
+         <Pricing headline="Arbitration Hearing" description= "Arbitration Hearing" inperson="750 " online="600 " bighead="Arbitration Hearing"/>
       <Footer />
     </div>
   );
