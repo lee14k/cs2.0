@@ -77,13 +77,13 @@ console.log()
    <ul class={`debug container ${isMobile() ? 'flex-col' : 'flex-row'} justify-center text-2xl text-emerald-700`}>
       {isMobile() && (
          <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
-            <img src="/newlogov2.png" />
+            <img src="/cslogorevision.png" />
          </li>
       )}
       <Show when={!isMobile() || showMobile()}>
          {!isMobile() && (
          <li class={`border-b-2 mx-1.5 sm:mx-6 logo`}>
-            <A href="/"><img src="/newlogov2.png" /></A>
+            <A href="/"><img src="/cslogorevision.png" /></A>
          </li>
       )}
          {menuItems.map(item => (

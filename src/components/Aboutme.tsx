@@ -14,7 +14,7 @@ const stats = [
 const team = [
   {
     name: "Patrick O'Brien",
-    role: "Co-Founder / CEO",
+    role: "Founder / CEO",
     imageUrl: "./patrickhead.jpg",
   },
  
