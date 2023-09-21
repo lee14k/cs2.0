@@ -118,8 +118,24 @@ export default function Arbitration() {
           </div>
         </div>
       </div>
-      <Pricing headline="Procedural Arbitration" description= "Procedural Hearings and Motion Practice" inperson="600 " online="550" bighead="Procedural Hearings & Motion Practice"/>
-         <Pricing headline="Arbitration Hearing" description= "Arbitration Hearing" inperson="750 " online="600 " bighead="Arbitration Hearing"/>
+      <Pricing
+        headline="Procedural Arbitration"
+        description="Procedural Hearings and Motion Practice"
+        inperson="600 "
+        online="550"
+        bighead="Procedural Hearings & Motion Practice"
+        timeUnit="per hour"
+        subhead="We offer in person and virtual rates."
+      />
+      <Pricing
+        headline="Arbitration Hearing"
+        description="Arbitration Hearing"
+        inperson="750 "
+        online="600 "
+        bighead="Arbitration Hearing"
+        timeUnit="per hour"
+        subhead="We offer in person and virtual rates."
+      />
       <Footer />
     </div>
   );

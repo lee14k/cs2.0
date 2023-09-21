@@ -1,5 +1,5 @@
 import Footer from "~/components/Footer";
-
+import Pricing from "../components/Pricing";
 export default function Org() {
   return (
     <div className="bg-white py-24 sm:py-32">
@@ -67,6 +67,15 @@ export default function Org() {
           </div>
         </div>
       </div>
+    <Pricing
+        headline="Organizational Solutions"
+        description="    Conflict culture assessment (Extensive assessment of the organization including employee interviews, management consultations, questionnaires, etc.). Management and employee training, coaching and Ombudsman services"
+        inperson="600 "
+        online="550"
+        bighead=" Conflict culture assessment "
+        timeUnit="per hour"
+        subhead="We offer in person and virtual rates."
+      />
       <Footer />
     </div>
   );

@@ -11,7 +11,7 @@ export default function Servicesgrid() {
           </A>
         </div>
         <div class="griditem miditem">
-          <h2 class="gridhead">Organizational Culture Assessment</h2>
+          <h2 class="gridhead">Organizational Assessment</h2>
           <A href="/organizationalculture">
             <button class="gridbutton">Read more</button>
           </A>
