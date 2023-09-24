@@ -7,6 +7,22 @@
   width: 400px;
   height: 400px;
 }
+
+
+.overlay-before::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.contact-button {
+  margin-left: 20px;
+}
+
 .header {
   display: flex;
   background-size: cover;
@@ -16,6 +32,13 @@
   flex-direction: column;
   z-index: 1;
   gap: 20px;
+  position: relative;
+  background-image: linear-gradient(
+    90deg,
+    rgba(51, 121, 9, 0.4) 0%,
+    rgba(90, 173, 39, 0.4) 45%,
+    rgba(255, 255, 255, 0.5) 91%
+  ), url('/cstab1.jpg');
 }
 
 .headline {

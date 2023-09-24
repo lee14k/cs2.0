@@ -58,7 +58,7 @@ const [solveRef] = useIntersectionObserver(element => {
               {features.map((feature, index) => (
                     <div key={feature.name} class="flex flex-col transition-opacity opacity-0" ref={refs[index]}>
                 <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 flex-none text-emerald-600">
-                  {feature.name}
+                <h2>{feature.name}</h2>  
                 </dt>
                 <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                   <p class="flex-auto">{feature.description}</p>
