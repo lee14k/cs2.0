@@ -78,6 +78,7 @@ export default function Home() {
         </div>
       </div>
       <Mid />
+
       <Footer />
     </div>
   );

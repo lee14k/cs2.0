@@ -60,14 +60,14 @@ export default function Mid() {
         // Add more fields as needed
         fieldTwo: textfieldtwo,
         fieldThree: textfieldthree,
-        fieldFour: textfieldfour,
+        fieldFour:textfieldfour,
       }));
       setFeatures(updatedFeatures);
     }
   });
 
   return (
-    <div class="bg-white sm:py-32">
+    <div class="bg-white sm:py-32 mx-20">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
           <h2 class="text-base font-semibold leading-7 text-emerald-600">
@@ -76,26 +76,40 @@ export default function Mid() {
           <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {"We'll give you the tools and solutions to"} <br/> <span class="solve-underline" >solve it</span>
           </p>
+          </div>
+          </div>
 
-          {/* Wrap the description in a Suspense block */}
-          <Suspense fallback={<div>Loading...</div>}>
-            <p class="mt-6 text-lg leading-8 text-gray-600">
-              {features()[0].description}
-            </p>
-
-            {/* Display additional fields */}
-            <p class="mt-4 text-lg leading-8 text-gray-600">
-              Additional Field 1: {features()[0].fieldTwo}
-            </p>
-            <p class="mt-4 text-lg leading-8 text-gray-600">
-              Additional Field 2: {features()[0].fieldThree}
-            </p>
-              <p class="mt-4 text-lg leading-8 text-gray-600">
-              Additional Field 2: {features()[0].fieldFour}
-            </p>
-          </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div class="grid grid-cols-3 gap-x-20 mt-10">
+          {features().map((feature, index) => (
+            <div key={index} class="mt-4 text-lg leading-8 text-gray-600">
+              <span class="flex items-center gap-x-3 text-base font-semibold leading-7 flex-none text-emerald-600">
+                {feature.name}
+              </span>
+              <span class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                {index === 0 ? feature.fieldTwo : index === 1 ? feature.fieldThree : feature.fieldFour}
+              </span>
+              {/* Button for each column */}
+              <p class="mt-6">
+             
+              </p>
+            </div>
+          ))}
         </div>
+      </Suspense>
+      {/* Common button for all columns */}
+      <div class="mt-6 text-center">
+        <a
+          href="#" // Set the appropriate link for the common button
+          class="text-sm font-semibold leading-6 text-emerald-700"
+        >
+          Our Services <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   );
 }
+
+
+
+

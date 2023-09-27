@@ -83,7 +83,7 @@ console.log()
       <Show when={!isMobile() || showMobile()}>
          {!isMobile() && (
          <li class={`border-b-2 mx-1.5 sm:mx-6 logo`}>
-            <A href="/"><img src="/cslogorevision.png" /></A>
+            <A href="/"><img src="/cslogo2.png" /></A>
          </li>
       )}
          {menuItems.map(item => (
