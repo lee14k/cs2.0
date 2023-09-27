@@ -100,10 +100,10 @@ export default function Mid() {
       {/* Common button for all columns */}
       <div class="mt-6 text-center">
         <a
-          href="#" // Set the appropriate link for the common button
+          href="/services" // Set the appropriate link for the common button
           class="text-sm font-semibold leading-6 text-emerald-700"
         >
-          Our Services <span aria-hidden="true">→</span>
+        Learn More<span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
