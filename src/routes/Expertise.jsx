@@ -1,7 +1,7 @@
-import { createSignal, createEffect, Suspense } from 'solid-js';
-import axios from 'axios';
-import Footer from '~/components/Footer';
-import Headerimage from '~/components/Headerimage';
+import { createSignal, createEffect, Suspense } from "solid-js";
+import axios from "axios";
+import Footer from "~/components/Footer";
+import Headerimage from "~/components/Headerimage";
 
 // Function to fetch ACF data for a specific post
 async function fetchACFData() {
@@ -11,14 +11,14 @@ async function fetchACFData() {
     const response = await axios.get(apiUrl);
 
     // Check if the response data is an object and has the 'acf' property
-    if (typeof response.data === 'object' && response.data.acf) {
+    if (typeof response.data === "object" && response.data.acf) {
       return response.data.acf;
     } else {
-      console.error('Error: ACF data not found in response.');
+      console.error("Error: ACF data not found in response.");
       return null;
     }
   } catch (error) {
-    console.error('Error fetching ACF data:', error);
+    console.error("Error fetching ACF data:", error);
     return null;
   }
 }
@@ -36,24 +36,24 @@ export default function Expertise() {
 
   const [features, setFeatures] = createSignal([
     {
-      name: 'Tort Litigation',
-      description: '',
+      name: "Tort Litigation",
+      description: "",
     },
     {
-      name: 'Probate',
-      description: '',
+      name: "Probate",
+      description: "",
     },
     {
-      name: 'Business Matters',
-      description: '',
+      name: "Business Matters",
+      description: "",
     },
     {
-      name: 'Construction Matters',
-      description: '',
+      name: "Construction Matters",
+      description: "",
     },
     {
-      name: 'Workplace Safety',
-      description: '',
+      name: "Workplace Safety",
+      description: "",
     },
   ]);
 
@@ -96,9 +96,9 @@ export default function Expertise() {
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Our areas of specialty
             </p>
-           <p className="mt-6 text-lg leading-8 text-gray-600">
-  {acfData().textfieldone }
-</p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              {acfData().textfieldone}
+            </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">

@@ -76,6 +76,9 @@ export default function Mid() {
           <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             {"We'll give you the tools and solutions to"} <br/> <span class="solve-underline" >solve it</span>
           </p>
+           <p className="mt-6 text-lg leading-8 text-gray-600">
+              {acfData().textfieldone}
+            </p>
           </div>
           </div>
 
