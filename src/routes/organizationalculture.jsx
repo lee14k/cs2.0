@@ -1,6 +1,51 @@
 import Footer from "~/components/Footer";
 import Pricing from "../components/Pricing";
+import { createSignal, createEffect } from 'solid-js';
+import axios from 'axios';
+
+async function fetchACFData() {
+  const apiUrl = `https://kaileehamre.net/wp-json/wp/v2/organizational-asses/65`;
+
+  try {
+    const response = await axios.get(apiUrl);
+
+    if (typeof response.data === 'object' && response.data.acf) {
+      return response.data.acf;
+    } else {
+      console.error('Error: ACF data not found in response.');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching ACF data:', error);
+    return null;
+  }
+}
+const paragraphs = [
+  { fieldName: 'textfieldone', description: '' },
+  { fieldName: 'textfieldtwo', description: '' },
+  { fieldName: 'textfieldthree', description: '' },
+  { fieldName: 'textfieldfour', description: '' },
+  { fieldName: 'textfieldfive', description: '' },
+];
+
 export default function Org() {
+    const [acfData, setACFData] = createSignal({});
+  const [paragraphsData, setParagraphsData] = createSignal(paragraphs);
+ createEffect(async () => {
+    const fetchedACFData = await fetchACFData();
+    if (fetchedACFData !== null) {
+      setACFData(fetchedACFData);
+      console.log(fetchedACFData)
+
+      const updatedParagraphsData = paragraphsData().map((paragraph) => ({
+        ...paragraph,
+        description: fetchedACFData[paragraph.fieldName] || '',
+      }));
+console.log(updatedParagraphsData)
+      setParagraphsData(updatedParagraphsData);
+    }
+  });
+
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -14,34 +59,18 @@ export default function Org() {
           <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
             <div>
               <p>
-                In the dynamic world of business, cultural misalignments can
-                give rise to tensions, miscommunications, and inefficiencies. A
-                culture that once steered a company to success can, over time,
-                become its very impediment. By delving deep into your
-                organizational culture, we help you unearth the invisible
-                barriers to your growth and harmony.
+                      {paragraphsData()[0].description || "Default content if not fetched"}
               </p>
               <p className="mt-8">
-                We recognize that every individual is a repository of insights,
-                experiences, and ideas. When assessing organizational culture,
-                the voices of the employees echo the true state of a company’s
-                heart and soul.
+                              {paragraphsData()[1].description || "Default content if not fetched"}
               </p>
             </div>
             <div>
               <p>
-                By fostering a collaborative partnership between the employees
-                and the corporation, we believe in creating solutions that not
-                only resolve current conflicts but also preempt potential
-                challenges. It's not just about mending; it's about evolving.
-                Together.
+                     {paragraphsData()[2].description || "Default content if not fetched"}
               </p>
               <p className="mt-8">
-                We believe in priotizing confidentiality, empathetic listening,
-                and flexible platforms in order to accomodate and respect
-                interviewees as much as possible. When assessing organizational
-                culture, the voices of the employees echo the true wellbeing of
-                a company.
+                       {paragraphsData()[3].description || "Default content if not fetched"}
               </p>
             </div>
           </div>

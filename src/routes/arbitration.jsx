@@ -1,6 +1,49 @@
 import Footer from "~/components/Footer";
-import Pricing from "~/components/Pricing";
+import Pricing from "../components/Pricing";
+import { createSignal, createEffect } from 'solid-js';
+import axios from 'axios';
+
+async function fetchACFData() {
+  const apiUrl = `https://kaileehamre.net/wp-json/wp/v2/organizational-asses/65`;
+
+  try {
+    const response = await axios.get(apiUrl);
+
+    if (typeof response.data === 'object' && response.data.acf) {
+      return response.data.acf;
+    } else {
+      console.error('Error: ACF data not found in response.');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error fetching ACF data:', error);
+    return null;
+  }
+}
+const paragraphs = [
+  { fieldName: 'textfieldone', description: '' },
+  { fieldName: 'textfieldtwo', description: '' },
+  { fieldName: 'textfieldthree', description: '' },
+  { fieldName: 'textfieldfour', description: '' },
+  { fieldName: 'textfieldfive', description: '' },
+]
 export default function Arbitration() {
+     const [acfData, setACFData] = createSignal({});
+  const [paragraphsData, setParagraphsData] = createSignal(paragraphs);
+ createEffect(async () => {
+    const fetchedACFData = await fetchACFData();
+    if (fetchedACFData !== null) {
+      setACFData(fetchedACFData);
+      console.log(fetchedACFData)
+
+      const updatedParagraphsData = paragraphsData().map((paragraph) => ({
+        ...paragraph,
+        description: fetchedACFData[paragraph.fieldName] || '',
+      }));
+console.log(updatedParagraphsData)
+      setParagraphsData(updatedParagraphsData);
+    }
+  });
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
       <div className="absolute inset-0 -z-10 overflow-hidden">
