@@ -4,7 +4,7 @@ import { createSignal, createEffect } from 'solid-js';
 import axios from 'axios';
 
 async function fetchACFData() {
-  const apiUrl = `https://kaileehamre.net/wp-json/wp/v2/organizational-asses/65`;
+  const apiUrl = `https://kaileehamre.net/wp-json/wp/v2/arbitration/54`;
 
   try {
     const response = await axios.get(apiUrl);
@@ -104,12 +104,7 @@ console.log(updatedParagraphsData)
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p>
-                We understand that conflicts, whether personal or professional,
-                can be challenging and often emotionally draining. Disputes, if
-                not handled adeptly, can lead to fractured relationships,
-                financial strain, and a host of other unwanted complications.
-                That's where we step in, offering a beacon of resolution amidst
-                the fog of disagreement.
+            {paragraphsData()[0].description || "Default content if not fetched"} 
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
@@ -117,14 +112,7 @@ console.log(updatedParagraphsData)
                     <strong className="font-semibold text-gray-900">
                       Personal problems demand personal solutions.
                     </strong>{" "}
-                    One key advantage of opting for our services is the
-                    personalized attention each case receives. We believe that
-                    every conflict has its unique intricacies and deserves a
-                    tailored approach. We are deeply committed to fostering an
-                    environment of open dialogue, where all parties feel heard
-                    and understood. This not only expedites the resolution
-                    process but also ensures that the outcomes are sustainable
-                    and long-lasting.
+                 {paragraphsData()[1].description || "Default content if not fetched"} 
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -132,13 +120,7 @@ console.log(updatedParagraphsData)
                     <strong className="font-semibold text-gray-900">
                       Experienced Professionals
                     </strong>{" "}
-                    Our team at Conflict Solutions comprises seasoned
-                    professionals who bring with them a wealth of experience
-                    spanning various sectors, from international trade disputes
-                    to intricate technology disagreements. We pride ourselves on
-                    our ability to navigate the nuances of each unique case,
-                    always prioritizing fairness, understanding, and the best
-                    interests of all parties involved.
+                  {paragraphsData()[2].description || "Default content if not fetched"} 
                   </span>
                 </li>
               </ul>
@@ -147,15 +129,7 @@ console.log(updatedParagraphsData)
                 Resolution without the hassle
               </h2>
               <p className="mt-6">
-                In today's fast-paced world, many are seeking alternatives to
-                the traditional, often cumbersome, legal proceedings. Litigation
-                can be lengthy, costly, and public, whereas arbitration emerges
-                as a confidential, swifter, and more cost-effective solution.
-                Arbitration empowers the involved parties to have more control
-                over the resolution process, from choosing the arbitrator to
-                setting the timeline. This often results in outcomes that are
-                more in tune with the needs and preferences of the disputing
-                parties.
+             {paragraphsData()[3].description || "Default content if not fetched"} 
               </p>
             </div>
           </div>
