@@ -3,10 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.logo {
-  width: 400px;
-  height: 400px;
-}
+
 
 
 .overlay-before::before {
@@ -452,5 +449,36 @@ font-family: 'Poppins', sans-serif;
   .gridwrapper {
     display:flex;
     flex-direction:column;
+  }
+}
+
+.logo img {
+  max-width: 100px; /* Limit the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1200px) {
+  .logo img {
+    max-width: 50px; /* Smaller logo for mobile screens */
+  }
+  /* Add additional styles for mobile layout here if needed */
+
+  .threehome {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width:800px){
+  .logocontain {
+    display:none;
+  }
+
+  nav {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
   }
 }

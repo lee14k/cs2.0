@@ -14,6 +14,7 @@ import {
   Link,
 } from "solid-start";
 import "./root.css";
+import Navbar from "./components/Navbar";
 
 
 export default function Root() {
@@ -26,41 +27,11 @@ export default function Root() {
     { path: '/Expertise', label: 'Expertise' },
   ];
 
-  function applyGlobalFont(fontUrl: string): void {
-    const style = document.createElement('style');
-    style.textContent = `@import url('${fontUrl}'); body { font-family: 'Montserrat', sans-serif; }`;
-    document.head.appendChild(style);
+
   
-    // Cleanup function to remove the style element when the component is unmounted
-    onCleanup(() => {
-      document.head.removeChild(style);
-    });
-  }
+
+
   
-  const location = useLocation();
-  const active = (path: string) => (path === location.pathname ? 'border-emerald-400' : 'border-transparent');
-
-  const [isMobile, setIsMobile] = createSignal<boolean>(false);
-  const [showMobile, setShowMobile] = createSignal<boolean>(false);
-
-  createEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1200);
-    };
-console.log()
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  });
-
-  const toggleHamburger = () => {
-    setShowMobile(!showMobile());
-  };
-  const fontUrl = 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap';
-  applyGlobalFont(fontUrl);
   return (
     <Html lang="en">
       <Head>
@@ -71,36 +42,11 @@ console.log()
 
       </Head>
       <Body>
-        <Suspense>
-          <ErrorBoundary>
-<nav>
-   <ul class={`debug container ${isMobile() ? 'flex-col' : 'flex-row'} justify-center text-2xl text-emerald-700`}>
-      {isMobile() && (
-         <li class={`border-b-2 mx-1.5 sm:mx-6 logo`} onClick={toggleHamburger}>
-            <img src="/cslogorevision.png" />
-         </li>
-      )}
-      <Show when={!isMobile() || showMobile()}>
-         {!isMobile() && (
-         <li class={`border-b-2 mx-1.5 sm:mx-6 logo`}>
-            <A href="/"><img src="/cslogo2.png" /></A>
-         </li>
-      )}
-         {menuItems.map(item => (
-            <li class={`border-b-2 ${active(item.path)} mx-1.5 sm:mx-6`}>
-               <A href={item.path}>{item.label}</A>
-            </li>
-         ))}
-      </Show>
-     
-   </ul>
-</nav>
+  <Navbar/>
 
             <Routes>
               <FileRoutes />
             </Routes>
-          </ErrorBoundary>
-        </Suspense>
       </Body>
     </Html>
   );

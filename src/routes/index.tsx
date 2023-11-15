@@ -1,9 +1,5 @@
-import { createSignal } from "solid-js";
-import { useLocation } from "solid-start";
 import { A } from "solid-start";
-import Slidebox from "~/components/Slidebox";
 import Footer from "~/components/Footer";
-import Picture from "~/components/Picture";
 import Mid from "~/components/Mid";
 const gradientOverlayStyle = `
   position: relative;
@@ -32,12 +28,7 @@ const buttonStyles = `
 `;
 
 export default function Home() {
-  const location = useLocation();
 
-  const active = (path: string) =>
-    path === location.pathname
-      ? "text-emerald-600 mx-1.5 sm:mx-6"
-      : "text-black mx-1.5 sm:mx-6";
 
   const headerClass = `header `;
   const overlayBeforeClass = `overlay-before`;
@@ -64,7 +55,7 @@ export default function Home() {
         </style>
         <div class={overlayBeforeClass}></div>
         <div>
-          <div class="frostedglasshead fade-in">
+          <div class="frostedglasshead">
             {" "}
             <h1 class={h1Class}>
               Finding creative solutions to hard to solve problems{" "}

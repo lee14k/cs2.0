@@ -83,7 +83,7 @@ export default function Mid() {
           </div>
 
       <Suspense fallback={<div>Loading...</div>}>
-        <div class="grid grid-cols-3 gap-x-20 mt-10">
+        <div class="grid grid-cols-3 gap-x-20 mt-10 threehome">
           {features().map((feature, index) => (
             <div key={index} class="mt-4 text-lg leading-8 text-gray-600">
               <span class="flex items-center gap-x-3 text-base font-semibold leading-7 flex-none text-emerald-600">

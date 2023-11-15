@@ -16,6 +16,8 @@
     "vite": "^4.1.4"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@motionone/solid": "^10.16.2",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.8.2",
@@ -25,6 +27,7 @@
     "heroicons": "^2.0.18",
     "nodemailer": "^6.9.4",
     "puppeteer": "^21.3.4",
+    "react": "^18.2.0",
     "sanity": "^3.16.7",
     "solid-app-router": "^0.4.2",
     "solid-headless": "^0.13.1",
