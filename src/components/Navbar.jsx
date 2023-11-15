@@ -5,11 +5,10 @@ function Navbar() {
   const links = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Books', path: '/books' },
-    { name: 'Menu', path: '/menu' },
-    { name: 'Events', path: '/events' },
+    { name: 'Services', path: '/services' },
+    { name: 'Expertise', path: '/Expertise' },
+    { name: 'Neutrals', path: '/Neutrals' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Store', path: '/store' }
   ];
 
   return (
