@@ -6,7 +6,6 @@ function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Expertise', path: '/Expertise' },
     { name: 'Neutrals', path: '/Neutrals' },
     { name: 'Contact', path: '/contact' },
   ];
